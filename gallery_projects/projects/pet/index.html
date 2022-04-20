@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f4240c0d64.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+</head>
+<body>
+    <main>
+
+        
+	    <!----------------------------------- SCROLL UP BTN ----------------------------------------->
+
+
+        <div class="scroll-up-btn">
+            <i class="fas fa-angle-up"></i>
+        </div>
+
+        <header>
+            
+            <!----------------------------------- NAV ----------------------------------------->
+
+            <nav class="navbar" id="navbar">
+                <button class="hamburger" id="hamburger">
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </button>
+                <div class="nav-content">
+                    <div class="left">
+                        <div class="logo">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul class="nav-links">
+                            <li class="homes"><a href="#homes" class="js-scrollTo">home</a></li>
+                            <li class="firsts"><a href="#firsts" class="js-scrollTo">what we do</a></li>
+                            <li class="gallerys"><a href="#gallerys" class="js-scrollTo">gallery</a></li>
+                            <li class="productss"><a href="#productss" class="js-scrollTo">products</a></li>
+                            <li class="helps"><a href="#helps" class="js-scrollTo">help ?</a></li>
+                            <li class="registers"><a href="#registers" class="js-scrollTo">register</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            
+            <!----------------------------------- HOME SECTION ----------------------------------------->
+
+            <section class="home" id="homes">
+                <div class="home-content">
+                    <div class="home-title">
+                        <h1>Dogs are not our whole Life,
+                            But they make our Lives whole.</h1>
+                    </div>
+                    <div class="home-text">
+                        <p>Nisl blandit adipisci gravida blandit soluta, explicabo orci, distinctio
+                            duis unde provident suspendisse orci? Recusandae! Proident,
+                            quos do mi cupidatat.</p>
+                    </div>
+                    <div class="home-link">
+                        <div class="link-title">
+                            <div class="link">
+                                <a href="#">join us now</a>
+                            </div>
+                            <p class="home-sub-title">Every month a surprise gift*</p>
+                        </div>
+                        <div class="txt">
+                            <p> + </p>
+                        </div>
+                        <div class="home-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+
+        
+            <!----------------------------------- FIRST SECTION ----------------------------------------->
+        <section class="first" id="firsts">
+            <div class="first-content">
+                <div class="top">
+                    <div class="big-title">
+                        <h2>What we Do</h2>
+                    </div>
+                    <div class="sub-big-title">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Eius eum inventore consectetur dolorum, 
+                        voluptatum possimus temporibus vel ab, nesciunt quod!</p>
+                    </div>
+                    <div class="cards-container">
+                        <ul class="cards">
+                            <li class="card">
+                                <div class="card-top">
+                                    <img src="img/first-cards1.jpg" alt="photo d'un chien sur un canapé">
+                                </div>
+                                <div class="card-low">
+                                    <div class="card-low-container">
+                                        <div class="card-title">
+                                            <h4>Adopt a Dog</h4>
+                                        </div>
+                                        <div class="card-txt">
+                                            <p>Globally parallel task premium infomediaries</p>
+                                        </div>
+                                        <div class="card-link">
+                                            <a href="#">read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-top">
+                                    <img src="img/first-cards2.jpg" alt="photo d'un chien sur un canapé">    
+                                </div>
+                                <div class="card-low">
+                                    <div class="card-low-container">
+                                        <div class="card-title">
+                                            <h4>Pet Nutritionists</h4>
+                                        </div>
+                                        <div class="card-txt">
+                                            <p>Globally parallel task premium infomediaries</p>
+                                        </div>
+                                        <div class="card-link">
+                                            <a href="#">read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-top">
+                                    <img src="img/first-cards3.jpg" alt="photo d'un chien sur un canapé">
+                                </div>
+                                <div class="card-low">
+                                    <div class="card-low-container">
+                                        <div class="card-title">
+                                            <h4>Find a Pet Sitter</h4>
+                                        </div>
+                                        <div class="card-txt">
+                                            <p>Globally parallel task premium infomediaries</p>
+                                        </div>
+                                        <div class="card-link">
+                                            <a href="#">read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="card-top">
+                                    <img src="img/first-cards4.jpg" alt="photo d'un chien sur un canapé">
+                                </div>
+                                <div class="card-low">
+                                    <div class="card-low-container">
+                                        <div class="card-title">
+                                            <h4>Health & Wellbeing</h4>
+                                        </div>
+                                        <div class="card-txt">
+                                            <p>Globally parallel task premium infomediaries</p>
+                                        </div>
+                                        <div class="card-link">
+                                            <a href="#">read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="low">
+                    <div class="low-left">
+                        <div class="low-left-container">
+                            <div class="low-left-top-container">
+                                <div class="low-left-top">
+                                    <div class="low-left-top-title">
+                                        <h4>Join to Happy Customers</h4>
+                                    </div>
+                                    <div class="low-left-top-txt">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates deserunt facere placeat est animi, sunt?</p>
+                                    </div>
+                                    <div class="low-left-top-link">
+                                        <a href="#">join us now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="low-left-low">
+                                <!----------------------------------- COUNTER-UP ----------------------------------------->
+                                <section class="counter-up">
+                                    <div class="content">
+                                        <div class="box first">
+                                            <div class="counter">11365</div>
+                                            <div class="text">
+                                                <p>happy customers</p>
+                                            </div>
+                                        </div>
+                                        <div class="box second">
+                                            <div class="counter">145</div>
+                                            <div class="text">
+                                                <p>pet hosted</p>
+                                            </div>
+                                        </div>
+                                        <div class="box third">
+                                            <div class="counter">50</div>
+                                            <div class="text">
+                                                <p>professionals</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="low-right">
+                        <div class="second-carousel">
+                            <div class="slider">
+                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+                                <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+                                <div class="slider__inner">
+                                <div class="slider__contents">
+                                    <ul class="boxs">
+                                        <li class="box">
+                                            <div class="left">
+                                                <div class="box-image">
+                                                    <img src="img/carousel1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <div class="box-txt">
+                                                    <p>"Ligula scelerisque, tempus dicta eros dolorum itaque fugit, 
+                                                    tempore pellentesque, leo dolor, aenean, inceptos aptent nostra adipisci harum etiam explicabo."</p>
+                                                </div>
+                                                <div class="box-name">
+                                                    <p>- JOHN DOE . <span>XYZ Inc.</span></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="box">
+                                            <div class="left">
+                                                <div class="box-image">
+                                                    <img src="img/carousel2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <div class="box-txt">
+                                                    <p>"Sint quae anim enim quaerat! Assumenda esse metus torquent, senectus similique tempor? 
+                                                    Massa lacus a, dignissim sequi officiis, elementum non."</p>
+                                                </div>
+                                                <div class="box-name">
+                                                    <p>- JOHN DOE . <span>XYZ Inc.</span></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="slider__contents">
+                                    <ul class="boxs">
+                                        <li class="box">
+                                            <div class="left">
+                                                <div class="box-image">
+                                                    <img src="img/carousel3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <div class="box-txt">
+                                                    <p>"Placeat ultrices perferendis omnis consequat molestie quos pretium! 
+                                                    Donec deserunt ratione ultrices laborum vehicula rutrum deserunt! Torquent officiis? Et occaecati."</p>
+                                                </div>
+                                                <div class="box-name">
+                                                    <p>- JOHN DOE . <span>XYZ Inc.</span></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="box">
+                                            <div class="left">
+                                                <div class="box-image">
+                                                    <img src="img/carousel4.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <div class="box-txt">
+                                                    <p>"Occaecat autem turpis mollis ac nam cubilia, 
+                                                    culpa adipiscing per cubilia porta fugit numquam dignissim sequi.
+                                                    Aspernatur aliquip. Ornare molestias."</p>
+                                                </div>
+                                                <div class="box-name">
+                                                    <p>- JOHN DOE . <span>XYZ Inc.</span></p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>	
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+
+
+
+        <!----------------------------------- GALLERY SECTION ----------------------------------------->
+        
+
+        <section class="gallery" id="gallerys">
+            <div class="gallery-content">
+                <div class="top">
+                    <div class="big-title">
+                        <h2>Gallery</h2>
+                    </div>
+                    <div class="sub-big-title">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Eius eum inventore consectetur dolorum, 
+                        voluptatum possimus temporibus vel ab, nesciunt quod!</p>
+                    </div>
+                </div>
+                <div class="gallery-container">
+                    <div class="container">
+                        <div class="gallery">
+                            <a href="img/gallery1.jpg" target="_blank" class="img-1">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery2.jpg" target="_blank" class="img-2">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery3.jpg" target="_blank" class="img-3">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery4.jpg" target="_blank" class="img-4">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery5.jpg" target="_blank" class="img-5">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery6.jpg" target="_blank" class="img-6">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery7.jpg" target="_blank" class="img-7">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery8.jpg" target="_blank" class="img-8">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery9.jpg" target="_blank" class="img-9">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery10.jpg" target="_blank" class="img-10">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery11.jpg" target="_blank" class="img-11">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery12.jpg" target="_blank" class="img-12">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery13.jpg" target="_blank" class="img-13">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery14.jpg" target="_blank" class="img-14">
+                                <p>+</p>
+                            </a>
+                            <a href="img/gallery15.jpg" target="_blank" class="img-15">
+                                <p>+</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <!----------------------------------- PRODUCTS SECTION ----------------------------------------->
+
+
+
+        <section class="products" id="productss">
+            <div class="products-content">
+                <div class="top">
+                    <div class="big-title">
+                        <h2>Products</h2>
+                    </div>
+                    <div class="sub-big-title">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel.</p>
+                    </div>
+                </div>
+                <div class="low">
+                    <div class="low-content">
+                        <div class="left">
+                            <div class="image">
+                                <img src="img/productspet.png" alt="photo chien">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <ul class="products-list">
+                                <li class="product-list">
+                                    <div class="product-image">
+                                        <img src="img/products1.jpg" alt="croquettes pour chien">
+                                    </div>
+                                    <div class="product-title">
+                                        <h4>natural dog food</h4>
+                                    </div>
+                                    <div class="product-price">
+                                        <p>$11.49</p>
+                                    </div>
+                                </li>
+                                <li class="product-list">
+                                    <div class="product-image">
+                                        <img src="img/products2.jpg" alt="croquettes pour chien">
+                                    </div>
+                                    <div class="product-title">
+                                        <h4>dry dog food</h4>
+                                    </div>
+                                    <div class="product-price">
+                                        <p>$13.99</p>
+                                    </div>
+                                </li>
+                                <li class="product-list">
+                                    <div class="product-image">
+                                        <img src="img/products3.jpg" alt="croquettes pour chien">
+                                    </div>
+                                    <div class="product-title">
+                                        <h4>canvas dog food</h4>
+                                    </div>
+                                    <div class="product-price">
+                                        <p>$14.49</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="getpet">
+            <div class="getpet-container">
+                <div class="getpet-content">
+                    <div class="getpet-sub-txt">
+                        <p>want to adopt your a best friend?</p>
+                    </div>
+                    <div class="getpet-txt">
+                        <p>Unconditional love is as close as your nearest Shelter.</p>
+                    </div>
+                    <div class="getpet-link">
+                        <a href="#">get a pet now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <!----------------------------------- HELP SECTION ----------------------------------------->
+
+
+
+        <section class="help" id="helps">
+            <div class="help-content">
+                <div class="top">
+                    <div class="big-title">
+                        <h2>Need help ?</h2>
+                    </div>
+                    <div class="sub-big-title">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel.</p>
+                    </div>
+                </div>
+                <div class="low">
+                    <div class="low-content">
+                        <ul class="help-cards">
+                            <li class="help-card one">
+                                <div class="help-card-container">
+                                    <div class="help-card-title">
+                                        <h4>hire a pet sister</h4>
+                                    </div>
+                                    <div class="help-card-line">
+
+                                    </div>
+                                    <div class="help-card-text">
+                                        <p>795 Folsom Ave, Suite 600</p>
+                                        <p>San Francisco, CA 94107</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="help-card two">
+                                <div class="help-card-container">
+                                    <div class="help-card-title">
+                                        <h4>report a stray dog</h4>
+                                    </div>
+                                    <div class="help-card-line">
+                                        
+                                    </div>
+                                    <div class="help-card-text">
+                                        <p>call us</p>
+                                        <p>+1-111-222-333</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="help-card three">
+                                <div class="help-card-container">
+                                    <div class="help-card-title">
+                                        <h4>report harassment dog</h4>
+                                    </div>
+                                    <div class="help-card-line">
+                                    </div>
+                                    <div class="help-card-text">
+                                        <p>Email us</p>
+                                        <p>info@canvas.com</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="left">
+                <p>Copyrights © 2020 All Rights Reserved by Canvas Inc.</p>
+            </div>
+            <div class="right">
+                <ul class="footer-medias">
+                    <li class="footer-media">
+                        <div class="logo">
+                            <i class="bi bi-facebook"></i>
+                        </div>
+                    </li>
+                    <li class="footer-media">
+                        <div class="logo">
+                            <i class="bi bi-twitter"></i>
+                        </div>
+                    </li>
+                    <li class="footer-media">
+                        <div class="logo">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </li>
+                    <li class="footer-media">
+                        <div class="logo">
+                            <i class="bi bi-pinterest"></i>
+                        </div>
+                    </li>
+                    <li class="footer-media">
+                        <div class="logo">
+                            <i class="bi bi-vimeo"></i>
+                        </div>
+                    </li>
+                    <li class="footer-media">
+                        <div class="logo">
+                            <i class="bi bi-github"></i>
+                        </div>
+                    </li>
+                    <li class="footer-media">
+                        <div class="logo">
+                            <i class="bi bi-snapchat"></i>
+                        </div>
+                    </li>
+                    <li class="footer-media">
+                        <div class="logo">
+                            <i class="bi bi-linkedin"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,863 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+/* header styling */
+
+
+
+header{
+    width: 100%;
+    height: 90vh;
+}
+header div.img{
+    width: 100%;
+    height: 100%;
+    background-image: url('img/header.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 100% 34%;
+    filter: brightness(90%);   
+}
+header div.header-content{
+    position: absolute;
+    bottom: 18%;
+    left: 18%;
+    color: #fff;
+}
+header div.header-content h1{
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    line-height: 50px;
+    font-weight: bold;
+}
+header div.header-content h2{
+    font-size: 1.3rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+
+
+/* responsive header */
+
+
+@media screen and (max-width: 650px) {
+    header div.img{
+        background-position: 50% 100%;
+    }
+    header div.header-content{
+        width: 50%;
+        left: 10%;
+    }
+}
+
+
+/* nav styling */
+
+nav{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+}
+
+nav div.nav-content{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 10vh;
+}
+nav div.nav-content div.left{
+    width: 50%;
+}
+nav div.nav-content div.left ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav div.nav-content div.left ul.nav-links li:first-child a{
+    color: #767676;
+}
+nav div.nav-content div.left ul.nav-links li a{
+    color: #000;
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition: .3s;
+}
+nav div.nav-content div.left ul.nav-links li a:hover{
+    color: #767676;
+}
+nav div.nav-content div.right div.arrow i{
+    font-size: 1rem;
+    cursor: pointer;
+    color: #767676;
+}
+
+
+
+/* hamburger */
+
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+
+.hamburger:focus{
+    outline: none;
+}
+
+/* Burger animation */
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* responsive nav */
+
+@media screen and (max-width: 767px){
+    nav.navbar div.nav-content div.right div.arrow i{
+        display: none;
+    }
+    nav.navbar div.nav-content div.left{
+        width: 100%;
+    }
+    nav.navbar div.nav-content{
+        display: none;
+        width: 100%;
+    }
+    nav.navbar div.nav-content div.left ul.nav-links{
+        flex-direction: column;
+        padding-left: 5vh;
+        border-top: 1px solid #eee;
+        height: 100%;
+    }
+    nav.navbar.show div.nav-content div.left ul.nav-links li:not(:last-child){
+        border-bottom: 1px solid #eee;
+    }
+    nav.navbar.show div.nav-content{
+        display: flex;
+    }
+    nav.navbar.show{
+        height: 60vh;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+
+
+
+
+/*welcome section Styling */
+
+
+section.welcome{
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.welcome div.welcome-content{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+section.welcome div.welcome-content div.left{
+    width: 50%;
+    text-align: end;
+}
+section.welcome div.welcome-content div.left h2{
+    padding-right: 13vh;
+    transform: translateY(-1vh);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+section.welcome div.welcome-content div.right{
+    width: 50%;
+    height: 28vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    letter-spacing: 1px;
+}
+section.welcome div.welcome-content div.right h2{
+    color: #767676;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+section.welcome div.welcome-content div.right p{
+    font-size: 1.2rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+
+
+/* responsive welcome section */
+
+@media screen and (max-width: 1500px){
+    section.welcome div.welcome-content div.right{
+        width: 70%;
+        height: 33vh;
+    }
+}
+@media screen and (max-width: 1030px){
+    section.welcome{
+        height: 70vh;
+    }
+    section.welcome div.welcome-content{
+        flex-direction: column;
+        height: 70%;
+        justify-content: space-between;
+    }
+    section.welcome div.welcome-content div.left{
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+    }
+    section.welcome div.welcome-content div.left h2{
+        padding-right: 0;
+    }
+    section.welcome div.welcome-content div.right{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    section.welcome{
+        height: 80vh;
+    }
+    section.welcome div.welcome-content{
+        flex-direction: column;
+        height: 70%;
+        justify-content: flex-start;
+    }
+    section.welcome div.welcome-content{
+        height: 60vh;
+    }
+}
+
+
+
+
+/* font-1 section styling */
+
+section.font-1{
+    width: 100%;
+    height: 100vh;
+}
+section.font-1 div.img{
+    width: 100%;
+    height: 100%;
+    background-image: url('img/font-1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 100% 34%;
+    filter: brightness(90%);   
+}
+
+
+
+
+
+
+
+/*about section Styling */
+
+
+section.about{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.about div.about-content{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+section.about div.about-content div.left{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+section.about div.about-content div.left h2{
+    transform: translateY(1vh);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-right: 35vh;
+}
+section.about div.about-content div.left p{
+    font-size: 1rem;
+    width: 64%;
+    color: #767676;
+    margin-right: 9vh;
+    line-height: 25px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+section.about div.about-content div.right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    letter-spacing: 1px;
+}
+section.about div.about-content div.right h2{
+    color: #767676;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+section.about div.about-content div.right p{
+    font-size: 1.2rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+
+
+/* responsive about section */
+
+@media screen and (max-width: 1500px){
+    section.about div.about-content div.right{
+        width: 70%;
+        height: 33vh;
+    }
+}
+@media screen and (max-width: 1030px){
+    section.about{
+        height: 140vh;
+    }
+    section.about div.about-content{
+        flex-direction: column;
+        width: 80%;
+        justify-content: space-around;
+    }
+    section.about div.about-content div.left{
+        width: 100%;
+        height: 20vh;
+        line-height: 40px;
+    }
+    section.about div.about-content div.left h2{
+        padding-right: 0;
+        margin-right: 47vh;
+    }
+    section.about div.about-content div.left p{
+        align-self: center;
+        margin-right: 0;
+        text-align: center;
+    }
+    section.about div.about-content div.right{
+        width: 100%;
+        height: 70vh;
+    }
+}
+@media screen and (max-width: 600px){
+    section.about{
+        height: 180vh;
+    }
+    section.about div.about-content{
+        flex-direction: column;
+        height: 90%;
+        justify-content: flex-start;
+    }
+    section.about div.about-content div.left{
+        height: 40vh;
+        justify-content: flex-start;
+    }
+    section.about div.about-content div.left h2{
+        padding-right: 0;
+        margin-right: 20vh;
+    }
+}
+
+
+
+
+
+/* font-2 section styling */
+
+section.font-2{
+    width: 100%;
+    height: 100vh;
+}
+section.font-2 div.img{
+    width: 100%;
+    height: 100%;
+    background-image: url('img/font-2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 100% 77%;
+    filter: brightness(90%);
+}
+
+
+
+
+
+
+
+
+/*about section Styling */
+
+
+section.service{
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.service div.service-content{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+section.service div.service-content div.left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+section.service div.service-content div.left h2{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-right: 35vh;
+}
+section.service div.service-content div.left p{
+    font-size: 1rem;
+    width: 64%;
+    color: #767676;
+    margin-right: 3vh;
+    line-height: 25px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+section.service div.service-content div.right{
+    width: 50%;
+}
+section.service div.service-content div.right ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    letter-spacing: 1px;
+    height: 100%;
+}
+section.service div.service-content div.right ul li h2{
+    color: #767676;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+section.service div.service-content div.right ul li p{
+    font-size: 1.2rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+
+
+/* responsive about section */
+
+
+@media screen and (max-width: 1030px){
+    section.service div.service-content{
+        flex-direction: column;
+        height: 70%;
+        justify-content: space-between;
+    }
+    section.service div.service-content div.left{
+        width: 100%;
+        line-height: 40px;
+    }
+    section.service div.service-content div.left h2{
+        margin-right: 0;
+        align-self: center;
+    }
+    section.service div.service-content div.right{
+        width: 100%;
+        height: 110vh;
+    }
+}
+@media screen and (max-width: 600px){
+    section.service{
+        height: 160vh;
+    }
+    section.service div.service-content{
+        height: 80%;
+    }
+    section.service div.service-content div.right ul li h2{
+        font-size: 1.2rem;
+    }
+    section.service div.service-content div.right ul li p{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+/* font-3 section styling */
+
+section.font-3{
+    width: 100%;
+    height: 100vh;
+}
+section.font-3 div.img{
+    width: 100%;
+    height: 100%;
+    background-image: url('img/font-3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 100% 30%;
+    filter: brightness(90%);
+}
+
+
+
+
+
+
+
+
+
+
+/*news section Styling */
+
+
+section.news{
+    height: 170vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.news div.news-content{
+    width: 80%;
+    height: 140vh;
+    display: flex;
+    justify-content: space-around;
+}
+section.news div.news-content div.left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+section.news div.news-content div.left h2{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-right: 35vh;
+}
+section.news div.news-content div.right ul li:nth-child(2) h2::after{
+    width: 44vh;
+}
+section.news div.news-content div.right ul li:nth-child(2) h2:hover::after{
+    width: 44vh;
+}
+section.news div.news-content div.right ul li h2::after {
+    content: '';
+    height: 0; 
+    width: 30vh;
+    background: #000;
+    display: block;
+    position: absolute;
+    transition: .1s ease-in;
+}
+section.news div.news-content div.right ul li h2:hover{
+    color: #000;
+}
+section.news div.news-content div.right ul li h2:hover::after{
+    content: '';
+    height: .1em; 
+    width: 30vh;
+    background: #000;
+    display: flex;
+}
+section.news div.news-content div.left p{
+    font-size: 1rem;
+    width: 64%;
+    color: #767676;
+    margin-right: 3vh;
+    line-height: 25px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+section.news div.news-content div.right{
+    width: 50%;
+}
+section.news div.news-content div.right ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    letter-spacing: 1px;
+    height: 100%;
+}
+section.news div.news-content div.right ul li div.date p{
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    color: #767676;
+    transition: .1s ease-in;
+}
+section.news div.news-content div.right ul li div.date p::after {
+    content: '';
+    height: 0; 
+    width: 15vh;
+    background: #000;
+    display: block;
+    position: absolute;
+    transition: .1s ease-in;
+}
+section.news div.news-content div.right ul li div.date p:hover{
+    color: #000;
+}
+section.news div.news-content div.right ul li div.date p:hover::after{
+    content: '';
+    height: .2em; 
+    width: 15vh;
+    background: #000;
+    display: flex;
+}
+section.news div.news-content div.right ul li div.date{
+    transform: translateY(10px);
+}
+section.news div.news-content div.right ul li{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section.news div.news-content div.right ul li h2{
+    color: #767676;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+section.news div.news-content div.right ul li p{
+    font-size: 1.2rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+section.news div.news-content div.right ul li a{
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: #000;
+    transition: .1s ease-in;
+}
+section.news div.news-content div.right ul li a::after {
+    content: '';
+    height: .1em; 
+    width: 20.5vh;
+    background: #000;
+    display: block;
+    position: absolute;
+    transition: .1s ease-in;
+}
+section.news div.news-content div.right ul li a:hover{
+    color: #000;
+}
+section.news div.news-content div.right ul li a:hover::after{
+    content: '';
+    height: .2em; 
+    width: 20.5vh;
+    background: #000;
+    display: flex;
+}
+
+
+/* responsive about section */
+
+
+@media screen and (max-width: 1030px){
+    section.news{
+        height: 180vh;
+    }
+    section.news div.news-content{
+        flex-direction: column;
+        height: 90%;
+        justify-content: space-between;
+    }
+    section.news div.news-content div.left{
+        width: 100%;
+        line-height: 40px;
+    }
+    section.news div.news-content div.left h2{
+        margin-right: 0;
+        align-self: center;
+    }
+    section.news div.news-content div.right{
+        width: 100%;
+        height: 150vh;
+    }
+    section.news div.news-content div.right ul li{
+        height: 45vh;
+    }section.news div.news-content div.right ul li a::after {
+        width: 23vh;
+    }
+    section.news div.news-content div.right ul li a:hover::after{
+        width: 23vh;
+    }
+    section.news div.news-content div.right ul li h2::after {
+        width: 30vh;
+    }
+    section.news div.news-content div.right ul li h2:hover::after{
+        width: 30vh;
+    }
+    section.news div.news-content div.right ul li:nth-child(2) h2::after {
+        width: 50vh;
+    }
+    section.news div.news-content div.right ul li:nth-child(2) h2:hover::after{
+        width: 50vh;
+    }
+    
+}
+@media screen and (max-width: 600px){
+    section.news div.news-content div.right ul li h2{
+        font-size: 1.2rem;
+    }
+    section.news div.news-content div.right ul li p{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* font-4 section styling */
+
+section.font-4{
+    width: 100%;
+    height: 100vh;
+}
+section.font-4 div.img{
+    width: 100%;
+    height: 100%;
+    background-image: url('img/font-4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 100% 10%;
+    filter: brightness(90%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* iphone 12 pro responsive */
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3){
+    header{
+        height: 77vh;
+    }
+    header div.img{
+        height: 100%;
+    }
+    header div.header-content{
+        width: 60%;
+        bottom: 27%;
+        left: 5%;
+    }
+    section.about div.about-content div.left h2{
+        margin-right: 6vh;
+        line-height: 80px;
+    }
+    section.news div.news-content div.right ul li a::after {
+        width: 17vh;
+    }
+    section.news div.news-content div.right ul li a:hover::after{
+        width: 17vh;
+    }
+    section.news div.news-content div.right ul li h2::after {
+        width: 18vh;
+    }
+    section.news div.news-content div.right ul li h2:hover::after{
+        width: 18vh;
+    }
+    section.news div.news-content div.right ul li:nth-child(2) h2::after {
+        width: 26vh;
+    }
+    section.news div.news-content div.right ul li:nth-child(2) h2:hover::after{
+        width: 26vh;
+    }
+}

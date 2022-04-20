@@ -1,0 +1,813 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Ubuntu', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+
+header nav.navbar{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav.navbar div.nav-content{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1px;
+}
+header nav.navbar div.nav-content div.left div.logo h1{
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-decoration: underline;
+    line-height: 50px;
+}
+header nav.navbar div.nav-content div.left div.logo p{
+    text-transform: capitalize;
+}
+header nav.navbar div.nav-content div.right{
+    width: 70%;
+}
+header nav.navbar div.nav-content div.right ul.navbar-links{
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav.navbar div.nav-content div.right ul.navbar-links li:first-child a{
+    font-weight: 700;
+}
+header nav.navbar div.nav-content div.right ul.navbar-links li a{
+    color: #000;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+
+
+
+/* hamburger */
+
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+
+.hamburger:focus{
+    outline: none;
+}
+
+/* Burger animation */
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* responsive nav */
+
+@media screen and (max-width: 1000px){
+    header nav.navbar div.nav-content div.right{
+        display: none;
+        width: 85%;
+        height: 45%;
+        background-color: #fff;
+    }
+    header nav.navbar div.nav-content div.right ul.navbar-links{
+        flex-direction: column;
+        padding-left: 2vh;
+        border-top: 1px solid #eee;
+        height: 100%;
+        align-items: flex-start;
+    }
+    header nav.navbar.show div.nav-content div.right{
+        display: flex;
+        position: absolute;
+        top: 15vh;
+        border: 1px solid #c6c6c6;
+        border-radius: 5px;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+
+
+
+
+
+
+/* home section styling */
+
+
+
+section.home{
+    height: 180vh;
+    display: flex;
+    justify-content: center;
+}
+section.home div.home-content{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+section.home div.home-content div.top{
+    display: flex;
+    align-items: center;
+    height: 40%;
+}
+section.home div.home-content div.top div.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+section.home div.home-content div.top div.title h1{
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    width: 60%;
+}
+section.home div.home-content div.low div.img img{
+    width: 100%;
+}
+section.home div.home-content div.down{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.home div.home-content div.down div.text{
+    width: 60%;
+}
+section.home div.home-content div.down div.text p{
+    font-size: 2.2rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+/* responsive home */
+
+
+@media screen and (max-width: 600px) {
+    section.home div.home-content div.top div.title h1{
+        width: 100%;
+        font-size: 2rem;
+    }
+    section.home{
+        height: 150vh;
+    }
+    section.home div.home-content div.down div.text p{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+/* classes section styling */
+
+
+section.classes{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.classes div.classes-content{
+    display: flex;
+    width: 80%;
+    height: 71%;
+    flex-direction: row;
+}
+
+section.classes div.classes-content div.left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+section.classes div.classes-content div.left div.left-content{
+    letter-spacing: .5px;
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section.classes div.classes-content div.left div.left-content div.title h1{
+    text-transform: capitalize;
+    font-size: 1.9rem;
+}
+section.classes div.classes-content div.left div.left-content div.text{
+    width: 80%;
+}
+section.classes div.classes-content div.left div.left-content div.text p{
+    font-size: 1.2rem;
+    line-height: 35px;
+
+}
+section.classes div.classes-content div.left div.left-content div.link a{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 13px;
+    background-color: #19744c;
+    border-radius: 3px;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+section.classes div.classes-content div.left div.left-content div.link a:hover{
+    text-decoration: underline;
+    background-color: #145f3e;
+}
+section.classes div.classes-content div.right{
+    width: 50%;
+    height: 100%;
+}
+section.classes div.classes-content div.right div.image img{
+    width: 100%;
+}
+
+/* responsive teachers section */
+
+
+@media screen and (max-width: 1000px){
+    section.classes{
+        height: 110vh;
+    }
+    section.classes div.classes-content{
+        height: 95%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.classes div.classes-content div.left div.left-content div.title h1{
+        text-align: center;
+    }
+    section.classes div.classes-content div.left div.left-content div.link{
+        text-align: center;
+    }
+    section.classes div.classes-content div.left div.left-content div.text{
+        width: 100%;
+    }
+    section.classes div.classes-content div.left{
+        width: 80%;
+    }
+}
+
+
+
+
+
+/* blog section styling */
+
+
+section.blog{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+section.blog div.blog-content{
+    width: 100%;
+    height: 90%;
+}
+section.blog div.blog-content div.image{
+    width: 100%;
+    height: 100%;
+    background-image: url('img/blog.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: 50% 45%;
+    filter: brightness(50%);
+}
+
+section.blog div.blog-content div.content{
+    position: relative;
+    bottom: 60vh;
+    width: 100%;
+    height: 27vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+section.blog div.blog-content div.content div.text{
+    width: 60%;
+}
+section.blog div.blog-content div.content div.text p{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+section.blog div.blog-content div.content div.button a{
+    color: #000;
+    background-color: #fff;
+    text-transform: capitalize;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+section.blog div.blog-content div.content div.button a:hover{
+    text-decoration: underline;
+}
+
+
+/* responsive teachers section */
+
+
+
+@media screen and (max-width: 1500px){
+    section.blog div.blog-content div.content{
+        height: 33vh;
+    }
+}
+
+@media screen and (max-width: 1005px){
+    section.blog div.blog-content div.content div.text p{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    section.blog div.blog-content div.content{
+        height: 40vh;
+    }
+}
+
+
+
+
+
+
+
+
+/* teachers section styling */
+
+
+section.teachers{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.teachers div.teachers-content{
+    display: flex;
+    width: 80%;
+    height: 71%;
+    flex-direction: row;
+}
+
+section.teachers div.teachers-content div.left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+section.teachers div.teachers-content div.left div.left-content{
+    letter-spacing: .5px;
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section.teachers div.teachers-content div.left div.left-content div.title h1{
+    text-transform: capitalize;
+    font-size: 1.9rem;
+}
+section.teachers div.teachers-content div.left div.left-content div.text{
+    width: 80%;
+}
+section.teachers div.teachers-content div.left div.left-content div.text p{
+    font-size: 1.2rem;
+    line-height: 35px;
+
+}
+section.teachers div.teachers-content div.left div.left-content div.link a{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 13px;
+    background-color: #19744c;
+    border-radius: 3px;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+section.teachers div.teachers-content div.left div.left-content div.link a:hover{
+    text-decoration: underline;
+    background-color: #145f3e;
+}
+section.teachers div.teachers-content div.right{
+    width: 50%;
+    height: 100%;
+}
+section.teachers div.teachers-content div.right div.image img{
+    width: 100%;
+}
+
+/* responsive teachers section */
+
+
+@media screen and (max-width: 1000px){
+    section.teachers{
+        height: 110vh;
+    }
+    section.teachers div.teachers-content{
+        height: 95%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.teachers div.teachers-content div.left div.left-content div.title h1{
+        text-align: center;
+    }
+    section.teachers div.teachers-content div.left div.left-content div.link{
+        text-align: center;
+    }
+    section.teachers div.teachers-content div.left div.left-content div.text{
+        width: 100%;
+    }
+    section.teachers div.teachers-content div.left{
+        width: 80%;
+    }
+}
+
+
+
+
+/* price section styling */
+
+
+section.price{
+    width: 100%;
+    height: 60vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.price div.price-content{
+    width: 80%;
+    height: 65%;
+}
+section.price div.price-content ul.price-list{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+section.price div.price-content ul.price-list li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+section.price div.price-content ul.price-list li div.title h2{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+section.price div.price-content ul.price-list li:first-child{
+    color: #19744c;
+}
+section.price div.price-content ul.price-list li:first-child div.link a{
+    background-color: #19744c;
+}
+section.price div.price-content ul.price-list li:first-child div.link a:hover{
+    background-color: #145f3e;
+}
+
+section.price div.price-content ul.price-list li div.link a{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 13px;
+    background-color: #000;
+    border-radius: 3px;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+section.price div.price-content ul.price-list li div.link a:hover{
+    text-decoration: underline;
+}
+section.price div.price-content ul.price-list li div.price p{
+    font-size: 40px;
+    font-weight: 700;
+}
+section.price div.price-content ul.price-list li div.delay p{
+    font-size: .9rem;
+}
+
+
+
+/* responsive price section */
+
+
+@media screen and (max-width: 1000px){
+    section.price{
+        height: 130vh;
+    }
+    section.price div.price-content{
+        height: 90%;
+    }
+    section.price div.price-content ul.price-list{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    section.price div.price-content ul.price-list li{
+        height: 25%;
+    }
+}
+
+
+
+
+
+/* footer-nav styling */
+
+
+section.footer-nav{
+    height: 80vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.footer-nav div.footer-nav-content{
+    width: 80%;
+    height: 60%;
+}
+section.footer-nav div.footer-nav-content ul.list-links{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+section.footer-nav div.footer-nav-content ul.list-links li{
+    font-size: 1.2rem;
+}
+
+section.footer-nav div.footer-nav-content ul.list-links li.first{
+    width: 40%;
+    height: 60%;
+}
+section.footer-nav div.footer-nav-content ul.list-links li.first div.title h1{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+section.footer-nav div.footer-nav-content ul.list-links li.first div.text{
+    width: 85%;
+}
+section.footer-nav div.footer-nav-content ul.list-links li div p{
+    line-height: 30px;
+}
+section.footer-nav div.footer-nav-content ul.list-links li:not(:last-child){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section.footer-nav div.footer-nav-content ul.list-links li.second div{
+    width: 90%;
+}
+section.footer-nav div.footer-nav-content ul.list-links li:last-child{
+    width: 40%;
+}
+
+section.footer-nav div.footer-nav-content ul.list-links li div.horaires{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+section.footer-nav div.footer-nav-content ul.list-links li div.horaires div.left{
+    width: 50%;
+}
+
+section.footer-nav div.footer-nav-content ul.list-links li div.horaires div.left ul.days{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+section.footer-nav div.footer-nav-content ul.list-links li div.horaires div.left ul.days li{
+    text-transform: capitalize;
+    font-weight: 700;
+}
+section.footer-nav div.footer-nav-content ul.list-links li div.horaires div.right{
+    width: 60%;
+}
+
+section.footer-nav div.footer-nav-content ul.list-links li div.horaires div.right ul.heure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+
+
+/* responsive footer-nav section */
+
+@media screen and (max-width: 1310px){
+    section.footer-nav{
+        height: 120vh;
+    }
+    section.footer-nav div.footer-nav-content{
+        height: 70%;
+    }
+    section.footer-nav div.footer-nav-content ul.list-links{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    section.footer-nav div.footer-nav-content ul.list-links li{
+        width: 100%;
+        height: 33%;
+    }
+    section.footer-nav div.footer-nav-content ul.list-links li.first{
+        height: 0;
+        width: 90%;
+    }
+    section.footer-nav div.footer-nav-content ul.list-links li:last-child{
+        width: 100%;
+    }
+}
+
+
+
+/* footer section styling */
+
+footer{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+footer div.footer-content{
+    width: 60%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+footer div.footer-content div.left p{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+footer div.footer-content div.left p span:hover{
+    color: #19744c;
+    text-decoration: underline;
+}
+footer div.footer-content div.right{
+    width: 15%;
+}
+footer div.footer-content div.right ul.list-medias{
+    display: flex;
+    justify-content: space-between;    
+}
+footer div.footer-content div.right ul.list-medias li a i{
+    font-size: 25px;
+    color: #000;
+}
+
+
+
+/* responsive footer section */
+
+@media screen and (max-width: 1310px){
+    footer div.footer-content{
+        width: 70%;
+    }
+    footer div.footer-content div.right{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    footer div.footer-content{
+        width: 80%;
+    }
+    footer div.footer-content div.right{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    footer div.footer-content{
+        width: 90%;
+    }
+}
+
+
+/* scroll animation */
+
+
+[class*= "reveal-"] {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+[class*= "reveal_2-"] {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.reveal-visible-2{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+[class*= "reveal_3-"] {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.reveal-visible-3{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+.reveal-2{
+    transition-delay: .1s;
+}
+.reveal-3{
+    transition-delay: .2s;
+}
+.reveal-4{
+    transition-delay: .3s;
+}
+.reveal-5{
+    transition-delay: .4s;
+}
+.reveal_2-2{
+    transition-delay: .1s;
+}
+.reveal_2-3{
+    transition-delay: .2s;
+}
+.reveal_2-4{
+    transition-delay: .3s;
+}
+.reveal_2-5{
+    transition-delay: .4s;
+}
+.reveal_3-2{
+    transition-delay: .1s;
+}
+.reveal_3-3{
+    transition-delay: .2s;
+}
+.reveal_3-4{
+    transition-delay: .3s;
+}
+.reveal_3-5{
+    transition-delay: .4s;
+}
+
+
+

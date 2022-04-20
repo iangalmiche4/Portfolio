@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f4240c0d64.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css%22%3E">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+</head>
+<body>
+    
+    <section class="home" id="homes">
+        <div class="lignes">
+            <div class="l1"></div>
+            <div class="l2"></div>
+        </div>
+        <div class="container-first">
+            <h1>
+                <div class="txt-title">
+                    <span>bienvenue, </span>
+                </div>
+                <div class="txt-title">
+                    <span>je m'appelle </span><span>Ian </span>
+                </div>
+                <div class="txt-title">
+                    <span>et suis <span class="typing"></span>
+                </div>
+            </h1>
+            <div class="container-btns">
+                <a href="#abouts" class="js-scrollTo"><button class="btn-first b1">discover</button></a>
+                <a href="#contacts" class="js-scrollTo"><button class="btn-first b2">contact</button></a>
+            </div>
+        </div>
+
+        <img src="img/logo.png" class="logo">
+
+        <ul class="medias">
+            <li class="bulle"><a href="https://www.snapchat.com/add/igalmiche4?share_id=C18Iazsbrhs&locale=fr-FR" target="_blank"><img src="img/snap.png" alt="logo snapchat" class="logo-medias"></a></li>
+            <li class="bulle"><a href="https://www.instagram.com/ian.glm/" target="_blank"><img src="img/insta.svg" class="logo-medias"></a></li>
+            <li class="bulle"><a href="https://www.linkedin.com/in/ian-galmiche-1a8538208/" target="_blank"><img src="img/in.png" class="logo-medias"></a></li>
+        </ul>
+
+    </section>
+
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    
+	<!----------------------------------- NAVBAR ----------------------------------------->
+
+    <nav class="navbar" id="navbar">
+        <button class="hamburger" id="hamburger">
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </button>
+        <div class="nav-content" id="nav-content">
+            <div class="left">
+                <ul class="nav-links">
+                    <li class="homes"><a href="#homes" class="js-scrollTo">home</a></li>
+                    <li class="abouts"><a href="#abouts" class="js-scrollTo">a propos</a></li>
+                    <li class="experiences"><a href="#experiences" class="js-scrollTo">experience</a></li>
+                    <li class="educations"><a href="#educations" class="js-scrollTo">education</a></li>
+                    <li class="projectss"><a href="#projectss" class="js-scrollTo">projets</a></li>
+                    <li class="contacts"><a href="#contacts" class="js-scrollTo">contact</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="arrow">
+                    <a href="#footers" class="js-scrollTo"><i class="fas fa-arrow-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+	<!----------------------------------- ABOUT SECTION ----------------------------------------->
+
+    <section class="about" id="abouts">
+            <h2 class="title reveal-1">A propos</h2>
+            <div class="about-content">
+                <div class="card-container">
+                    <div id="main-card" class="reveal-3">
+                        <img src="img/main-card1.jpg">
+                        <h2 class="reveal_3-1">Bonjour,</h2><br>
+                        <ul class="reveal-3">
+                            <li><p>Je m'appelle Ian GALMICHE, j'ai 20 ans.</p></li><br>
+                            <li><p>Je vis à Saint-Germain-en-Laye et étudie à l'ESILV en formation Bachelor ingénierie numérique spécialités développement web et cybersécurité.</p></li><br>
+                        </ul>
+                        <a href="cv/CV_ian_galmiche.pdf" target="_blank"><button class="reveal-4">Télécharger CV</button></a>
+                    </div>
+
+                    <div class="flip-effect">
+                        <div id="card" class="reveal-2">
+                            <div class="front">
+                                <img src="img/main-card2.jpg">
+                                <h2 class="reveal_3-1">Mes passions</h2><br>
+                                <ul>
+                                    <li class="reveal_3-2"><p>Je vous parle de toutes mes passions et de tout les sports que j'ai pu faire</p></li>
+                                    <button class="reveal_3-3">En savoir plus</button>
+                                </ul>
+                            </div>
+
+                            <div class="back">
+                                <ul>
+                                    <li><h3>Le sport</h3></li>
+                                    <li><p>7 ans de tennis</p></li>
+                                    <li><p>5 ans de parkour, freerunning, tricking</p></li>
+                                    <li><p>3 ans de hockey sur gazon</p></li>
+                                    <li><p>3 ans de judo</p></li>
+                                    <li><p>1 an de volley</p></li>
+                                    <li><p class="sub-title">J'ai d'autres passions en dehors du sport</p></li>
+                                    <li><p>Les reptiles</p></li>
+                                    <li><p>Les voitures: titulaire du permis B <i class="fas fa-car"></i></p></li>
+                                    <li><p>L'informatique et le développement web <i class="fa fa-laptop" aria-hidden="true"></i></p></li><br>
+                                </ul>
+                                <button><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-effect">
+                        <div id="card2" class="reveal-2">
+                            <div class="front">
+                                <img src="img/main-card3.jpg">
+                                <h2 class="reveal_2-1">Mes voyages</h2><br>
+                                <ul>
+                                    <li class="reveal_2-2"><p>J'ai beaucoup voyagé dans ma vie</p></li>
+                                    <button class="reveal_2-3">En savoir plus</button>
+                                </ul>
+
+                            </div>
+
+                            <div class="back">
+                                <ul>
+                                    <li><h3>Mes voyages <i class="fas fa-plane"></h3></i></li>
+                                    <li><p>Chine</p></li>
+                                    <li><p>Bali</p></li>
+                                    <li><p>Argentine</p></li>
+                                    <li><p>Brésil</p></li>
+                                    <li><p>Japon</p></li>
+                                    <li><p>Grèce</p></li>
+                                    <li><p>Islande</p></li>
+                                    <li><p>Costa Rica</p></li>
+                                </ul>
+                                <button><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!----------------------------------- EXPERIENCE SECTION ----------------------------------------->
+
+    <section class="experience" id="experiences">
+        <h2 class="title reveal-1">experience professionnelle</h2>
+        <div class="experience-content">
+            <div class="box-area">
+                <ul class="boxs">
+                    <li class="box reveal-3">
+                        <div class="left reveal_3-2">
+                            <div class="left-content">
+                                <div class="date">
+                                    <p>semptembre 2021 - juin 2022</p>
+                                </div>
+                                <div class="text">
+                                    <h3>Projet Pix 2</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right reveal_2-2">
+                            <div class="right-content">
+                                <div class="sub-title">
+                                    <h4>Mise en situation</h4>
+                                </div>
+                                <div class="text">
+                                    <p>
+                                        Projet collectif dont l'objectif est
+                                        de créer un instrument de musique joué
+                                        mécaniquement et contrôlé électroniquement.
+                                        Deux équipes MOA, MOE doivent collaborer et réaliser le projet réfléchi par l'autre équipe.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="box reveal-3">
+                        <div class="left reveal_3-2">
+                            <div class="left-content">
+                                <div class="date">
+                                    <p>juin 2021</p>
+                                </div>
+                                <div class="text">
+                                    <h3>Stage WordPress</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right reveal_2-2">
+                            <div class="right-content">
+                                <div class="sub-title">
+                                    <h4>Développement site web avec WordPress</h4>
+                                </div>
+                                <div class="text">
+                                    <p>
+                                        Remise en service et mise à jour du site internet du cabinet
+                                        dentaire des docteurs Alain Taconet et Le Khang- kai via
+                                        WordPress. J'ai également travaillé dans le cabinet dentaire en tant qu'assistant dentaire
+                                        en préparant tout le matériel nécessaire aux opérations ainsi qu'en le désinfectant.
+                                    </p>
+                                </div>
+                                <div class="link-cabinet">
+                                    <a href="https://www.cabinetdentairefranconville.com/" target="_blank">Voir le site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="box reveal-3">
+                        <div class="left reveal_3-2">
+                            <div class="left-content">
+                                <div class="date">
+                                    <p>août 2021 - present</p>
+                                </div>
+                                <div class="text">
+                                    <h3>Agent de Service Hospitalier</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right reveal_2-2">
+                            <div class="right-content">
+                                <div class="sub-title">
+                                    <h4>CDD d'un mois puis vacations à l'hopital de Poissy</h4>
+                                </div>
+                                <div class="text">
+                                    <p>Emploi multi-tâches (service de restauration pour les patients, nettoyage des locaux, assistance aux patients).   <br>
+                                    J’ai été apprécié et reconnu pour mon travail,
+                                    ce qui ma permis de décrocher une place parmi les vacataires de l’hôpital.
+                                    Je peux désormais travailler lorsque j’en ai envie et dans le service qui me plait.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+        
+
+
+
+    <!----------------------------------- EDUCATION SECTION ----------------------------------------->
+    
+    <section class="education" id="educations">
+        <h2 class="title reveal-1">education</h2>
+        <div class="education-content">
+            <div class="box-area">
+                <ul class="boxs">
+                    <li class="box first reveal-3">
+                        <div class="left reveal_3-2">
+                            <div class="left-content first"></div>
+                        </div>
+                        <div class="right reveal_2-2">
+                            <div class="right-content">
+                                <div class="sub-title">
+                                    <h4>Bachelor sciences du numérique à l'ESILV <br>
+                                        Spécialités : développement web et cybersécurité.</h4>
+                                </div>
+                                <div class="text">
+                                    <ul class="hard_skills">
+                                        <li>
+                                            <p>
+                                                Formations aux Softs Skills (Compétences humaines). 
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>        
+                                                <span>Enseignements :</span> Mathématiques, Electronique, Anglais,
+                                                Architecture des ordinateurs, Algorithmique, Réseaux et
+                                                protocoles, sécurité informatique, mécatronique, analyse de
+                                                données, réseau Wireless, base de données.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span>Programmation :</span> HTML/CSS/JAVASCRIPT/PHPMYADMIN/
+                                                SQL/PYTHON/LANGAGE C
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span>Outils/Serveur :</span> XAMPP, Git, Linux, Oracle VM, Visual Studio
+                                                code, Sublim text, Word, Power Point, Teams, Discord,
+                                                Yammer.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="box second reveal-3">
+                        <div class="left reveal_3-2">
+                            <div class="left-content second"></div>
+                        </div>
+                        <div class="right reveal_2-2">
+                            <div class="right-content">
+                                <div class="sub-title second">
+                                    <h4>Bac Scientifique au lycée Jeanne d'Albret à Saint-Germain-en-Laye 
+                                    Spécialité science et vie de la Terre.</h4>
+                                </div>
+                                <div class="text">
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!----------------------------------- PROJECTS SECTION ----------------------------------------->
+    
+
+    <section class="projects" id="projectss">
+        <h2 class="title reveal-1">projets</h2>
+        <div class="projects-content">
+            <div class="container">
+                <div class="gallery reveal-3">
+                    <a href="projects/byrne/index.html" target="_blank" class="img-1">
+                        <p>view</p>
+                    </a>
+                    <a href="projects/karuna/index.html" target="_blank" class="img-2">
+                        <p>view</p>
+                    </a>
+                    <a href="projects/cars/index.html" target="_blank" class="img-3">
+                        <p>view more</p>
+                    </a>
+                    <a href="projects/twenty/index.html" target="_blank" class="img-4">
+                        <p>view</p>
+                    </a>
+                    <a href="projects/balasana/index.html" target="_blank" class="img-5">
+                        <p>view</p>
+                    </a>
+                    <a href="projects/exford/index.html" target="_blank" class="img-6">
+                        <p>view</p>
+                    </a>
+                    <a href="projects/pet/index.html" target="_blank" class="img-7">
+                        <p>view</p>
+                    </a>
+                    <a href="projects/Space/index.html" target="_blank" class="img-8">
+                        <p>view</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!----------------------------------- CONTACT SECTION ----------------------------------------->
+
+    <section class="contact" id="contacts">
+        <div class="max-width">
+            <h2 class="title reveal-1">contact</h2>
+            <div class="contact-content">
+                <div class="column left reveal_3-3">
+                    <div class="text">Vous avez aimé ? Contactez-moi !</div>
+                    <p>Merci d'avoir visité mon portfolio, vous trouverez ci-dessous mes informations personnelles.</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Nom</div>
+                                <div class="sub-title">Ian GALMICHE</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Adresse</div>
+                                <div class="sub-title second">24 avenue du général Dubail 78100 Saint Germain-en-Laye</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">ian.galmiche@edu.devinci.fr</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-phone"></i>
+                            <div class="info">
+                                <div class="head">Téléphone</div>
+                                <div class="sub-title">06 78 47 69 15</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right reveal_2-3">
+                    <div class="text">Avez-vous une question ?</div>
+                    <form action="#">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" placeholder="Nom" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" placeholder="Adresse mail" required>
+                            </div>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" placeholder="Description.." required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Envoyer</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <!----------------------------------- FOOTER ----------------------------------------->
+
+    <footer id="footers">
+        <span>créé par <a href="#">ian galmiche</a> | <span class="far fa-copyright"></span> 2022 tout droits reservés.</span>
+    </footer>
+
+
+
+    
+
+    <!----------------------------------- SCRIPT ----------------------------------------->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

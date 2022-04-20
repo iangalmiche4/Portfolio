@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Poppins&display=swap');
+
+/* similar */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Dongle', sans-serif;
+}
+section.first .content div.title h1,
+section.second div.content div.title h1,
+div.title h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* nav logos styling */
+
+.nav_logo{
+    width: 100%;
+    height: 5vh;
+    background-color: #6636cc;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+.nav_logo .left{
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.nav_logo .right ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.nav_logo .right ul li{
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_logo .right ul li i{
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* responsive nav_logo */
+
+@media screen and (max-width: 500px){
+    .nav_logo{
+        height: 10vh;
+    }
+}
+
+/* nav styling */
+
+
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 40px;
+    height: 15vh;
+    background-color: #fff;
+    z-index: 999;
+    border-bottom: 1px solid #c1c1c1;
+}
+.navbar.sticky{
+    position: fixed;
+    top: 0%;
+}
+nav img{
+    width: 100px;
+    padding-top: 20px;
+    font-size: 5px;
+}
+nav .right ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+nav .right ul li a{
+    padding: 3px 10px 3px 10px;
+    margin-right: 5px;
+    border-radius: 20px;
+    color: #000;
+    font-size: 30px;
+    transition: 0.8s ease;
+    text-decoration: none;
+}
+nav .right ul li a:hover{
+    border-radius: 5px;
+    box-shadow: 0 0 5px #999,
+                0 0 5px #999;
+}
+nav ul ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid #6636cc;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+nav ul li:hover > ul{
+    top: 20vh;
+    opacity: 1;
+    visibility: visible;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #fff;
+}
+nav ul ul li a{
+    line-height: 50px;
+    box-shadow: none;
+}
+nav ul ul li a:hover{
+    color: #6636cc;
+    box-shadow: none;
+}
+.be_top{
+    margin-top: -5vh;
+}
+
+
+
+/* RESPONSIVE nav */
+
+@media screen and (max-width: 690px){
+    header nav.navbar div.left div.image img{
+        width: 80px;
+    }
+    nav ul li:hover > ul{
+        top: 25vh;
+    }
+
+}
+
+
+
+
+
+/* home section styling */
+
+
+section.home.margtop{
+    margin-top: 100px;
+}
+section.home{
+    background-image: url('img/home.jpeg');
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+/* responsive home section */
+
+@media screen and (max-width: 500px){
+    section.home{
+        height: 75vh;
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3){
+    section.home{
+        height: 55.3vh;
+    }
+    div.foot{
+        margin-bottom: 23vh;
+    }
+}
+
+/* first section styling */
+
+
+section.first div.top{
+    width: 100%;
+    background-color: #8bc34a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13vh;
+}
+section.first div.top p{
+    margin-right: 30px;
+    font-size: 30px;
+    color: #fff;
+}
+section.first div.top a{
+    border: 2px solid;
+    border-radius: 10px;
+    background: 0 0;
+    box-shadow: none;
+    font-weight: 550;
+    font-size: 25px;
+    letter-spacing: 3px;
+    line-height: 1;
+    padding: 8px 5px 5px 5px;
+    text-shadow: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.5s ease;
+}
+section.first div.top a:hover{
+    opacity: 0.5;
+}
+section.first .content div.boxs{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section.first .content div.boxs div.box{
+    width: 500px;
+    height: 300px;
+    background-color: #f0f0f0;
+    padding: 50px;
+}
+section.first .content div.boxs div.box:not(:first-child){
+    margin-left: 40px;
+}
+section.first .content div.boxs div.box{
+    font-size: 25px;
+    color: #333333;
+}
+section.first .content div.boxs div.box div.name{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+section.first .content div.boxs div.box div.name p i{
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    bottom: 5px;
+}
+section.first .content div.boxs div.box div.profil img{
+    border-radius: 50%;
+    width: 100px;
+}
+section.first .content div.boxs div.box div.profil{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* first section styling */
+
+
+@media screen and (max-width: 1040px) {
+    section.first .content div.boxs div.box{
+        width: 90%;
+    }
+    section.first .content div.boxs div.box div.profil{
+        margin-top: 12vh;
+    }
+    
+    section.first .content div.boxs div.box:not(:first-child){
+        margin-left: 0px;
+        margin-top: 15vh;
+    }
+}
+@media screen and (max-width: 958px) {
+    section.first .content div.boxs div.box div.profil{
+        margin-top: 6vh;
+    }
+}
+@media screen and (max-width: 690px) {
+    section.first div.top{
+        flex-direction: column;
+        height: 17vh;
+    }
+    section.first div.top p{
+        margin-right: 0px;
+    }
+    section.first div.top a{
+        font-size: 20px;
+    }
+    section.first .content div.boxs div.box div.profil{
+        margin-top: 2vh;
+    }
+}
+@media screen and (max-width: 600px) {
+    section.first .content div.boxs div.box{
+        max-height: 45vh;
+    }
+    section.first .content div.boxs div.box div.text{
+        line-height: 20px;
+    }
+    section.first .content div.boxs div.box div.profil{
+        margin-top: 11vh;
+    }
+}
+@media screen and (max-width: 545px) {
+    section.first .content div.boxs div.box div.profil{
+        margin-top: 8vh;
+    }
+    section.first div.top p{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 476px) {
+    section.first .content div.boxs div.box div.profil{
+        margin-top: 5vh;
+    }
+}
+@media screen and (max-width: 361px) {
+    section.first div.top p{
+        font-size: 20px;
+    }
+    section.first div.top a{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 419px) {
+    section.first .content div.boxs div.box div.profil{
+        margin-top: 2vh;
+    }
+}
+@media screen and (max-width: 375px) {
+    section.first .content div.boxs div.box div.profil{
+        margin-top: 0vh;
+    }
+}
+
+
+
+
+
+
+/* second section styling */
+
+
+
+section.second{
+    background-color: #f0f0f0;
+    margin-top: 20vh;
+}
+section.second div.content div.title h2{
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+}
+section.second div.content div.boxs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+section.second div.content div.boxs div.box{
+    width: 90vh;
+    height: 300px;
+}
+section.second div.content div.boxs div.box div.title h2{
+    font-size: 30px;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+section.second div.content div.boxs div.box div.title h2:hover{
+    color: #00d084;
+}
+
+section.second div.content div.boxs div.box div.title p{
+    color: #999;
+    font-size: 20px;
+}
+
+section.second div.content div.boxs div.box div.text{
+    font-size: 25px;
+}
+section.second div.content div.button{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10vh;
+}
+section.second div.content div.button a{
+    border: 2px solid;
+    border-radius: 10px;
+    background: 0 0;
+    box-shadow: none;
+    font-weight: 550;
+    font-size: 25px;
+    letter-spacing: 3px;
+    line-height: 1;
+    padding: 8px 5px 5px 5px;
+    text-shadow: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #6636cc;
+    transition: 0.5s ease;
+}
+section.second div.content div.button a:hover{
+    color: #00d084;
+}
+
+
+/* second section responsive */
+
+@media screen and (max-width: 600px) {
+    section.second div.content div.boxs div.box p{
+        line-height: 25px;
+    }
+    section.second div.content div.boxs div.box div.title{
+        text-align: center;
+    }
+}
+
+
+
+
+/* third section styling */
+
+section.third{
+    display: flex;
+    width: 100%;
+    height: 1232px;
+    margin-top: 10vh;
+}
+section.third div.container{
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+section.third div.container div.gallery{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-areas: 
+            'img-1 img-2 img-3 img-3'
+            'img-1 img-4 img-5 img-6'
+            'img-7 img-7 img-8 img-6';
+}
+section.third div.container div.gallery a{
+    width: 100%;
+    height: 25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+section.third div.container div.gallery a i{
+    font-size: 3rem;
+    position: relative;
+    color: rgba(255, 255, 255, .6);
+    z-index: 100;
+    padding: 1rem 3rem;
+    border: 2px solid rgba(255, 255, 255, .6);
+    border-radius: .4rem;
+    opacity: 0;
+    transition: opacity .5s;
+}
+section.third div.container div.gallery a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    transition: opacity .5s;
+}
+section.third div.container div.gallery a:hover i,
+section.third div.container div.gallery a:hover::before{
+    opacity: 1;
+}
+section.third div.container div.gallery a.img-1{
+    grid-area: img-1;
+    min-height: 51rem;
+    background-image: url('img/portrait_1.jpg');
+}
+section.third div.container div.gallery a.img-2{
+    grid-area: img-2;
+    background-image: url('img/square_1.jpg');
+}
+section.third div.container div.gallery a.img-3{
+    grid-area: img-3;
+    background-image: url('img/landscape_1.jpg');
+}
+section.third div.container div.gallery a.img-4{
+    grid-area: img-4;
+    background-image: url('img/square_2.jpg');
+}
+section.third div.container div.gallery a.img-5{
+    grid-area: img-5;
+    background-image: url('img/square_3.jpg');
+}
+section.third div.container div.gallery a.img-6{
+    min-height: 51rem;
+    grid-area: img-6;
+    background-image: url('img/portrait_2.jpg');
+}
+section.third div.container div.gallery a.img-7{
+    grid-area: img-7;
+    background-image: url('img/landscape_2.jpg');
+}
+section.third div.container div.gallery a.img-8{
+    grid-area: img-8;
+    background-image: url('img/square4.jpg');
+}
+
+
+
+/* responsive third section */
+
+@media screen and (max-width: 900px) {
+    section.third div.container div.gallery{
+        grid-template-areas: 
+            'img-1 img-1 img-2 img-2'
+            'img-1 img-1 img-3 img-3'
+            'img-4 img-4 img-5 img-5'
+            'img-6 img-6 img-7 img-7'
+            'img-8 img-8 img-8 img-8';
+    }
+    section.third div.container div.gallery a{
+        height: 20rem;
+    }
+    section.third div.container div.gallery a.img-1{
+        min-height: 41.5rem;
+    }
+    section.third div.container div.gallery a.img-6{
+        min-height: 20rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    section.third div.container div.gallery{
+        grid-template-areas: 
+            'img-1 img-1 img-1 img-1'
+            'img-2 img-2 img-2 img-2'
+            'img-3 img-3 img-3 img-3'
+            'img-4 img-4 img-4 img-4'
+            'img-5 img-5 img-5 img-5'
+            'img-6 img-6 img-6 img-6'
+            'img-7 img-7 img-7 img-7'
+            'img-8 img-8 img-8 img-8';
+    }
+    section.third div.container div.gallery a,
+    section.third div.container div.gallery a.img-1,
+    section.third div.container div.gallery a.img-6{
+        min-height: 10rem;
+        height: 10rem;
+    }
+}
+
+
+
+
+
+
+/* footer styling */
+
+
+
+
+
+footer{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 15vh;
+    width: 100%;
+    background-color: #6636cc;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+footer div.boxs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    flex-wrap: wrap;
+    padding-top: 10vh;
+}
+footer div.boxs div.box{
+    flex-direction: column;
+    width: 200px;
+}
+footer div.boxs div.box div.title h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 50px;
+}
+footer div.boxs div.box div.text p{
+    font-size: 17px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+footer div.boxs div.box div.list ul,
+footer div.boxs div.box div.list2 ul{
+    display: flex;
+    flex-direction: column;
+}
+footer div.boxs div.box div.list ul li,
+footer div.boxs div.box div.list2 ul li{
+    list-style: none;
+    line-height: 60px;
+}
+footer div.boxs div.box div.list ul li a,
+footer div.boxs div.box div.list2 ul li a{
+    display: flex;
+    text-decoration: none;
+    font-size: 17px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+footer div.boxs div.box div.list ul li:not(:first-child),
+footer div.boxs div.box div.list2 ul li:not(:first-child){
+    border-top: 1px solid rgba(153,153,153,.2);
+}
+footer div.boxs div.box div.list2 ul li:nth-child(3){
+    margin-left: 3vh;
+}
+div.foot{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.foot div.text p{
+    font-size: 30px;
+    color: #6636cc;
+    transition: 0.8s ease;
+    cursor: pointer;
+}
+div.foot div.text p:hover{
+    color: #8bc34a;
+}
+
+/* responsive footer */
+
+@media screen and (max-width: 900px) {
+    footer{
+        margin-top: 75%;
+    }
+}
+@media screen and (max-width: 600px) {
+    footer{
+        margin-top: 50%;
+    }
+    footer div.boxs div.box div.text p{
+        font-size: 12px;
+    }
+    footer div.boxs div.box div.title h2{
+        font-size: 15px;
+    }
+    footer div.boxs div.box div.list ul li a,
+    footer div.boxs div.box div.list2 ul li a{
+        font-size: 12px;
+    }
+    div.foot div.text p{
+        font-size: 25px;
+    }
+
+}
+

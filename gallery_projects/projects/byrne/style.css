@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Courier New', Courier, monospace;
+    color: #000;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+h1{
+    font-family: 'IBM Plex Serif', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+section{
+    min-height: 100vh;
+}
+
+
+
+/* scroll animation */
+
+
+[class*= "reveal-"] {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+[class*= "reveal_2-"] {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.reveal-visible-2{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+[class*= "reveal_3-"] {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.reveal-visible-3{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+.reveal-2{
+    transition-delay: .1s;
+}
+.reveal-3{
+    transition-delay: .2s;
+}
+.reveal-4{
+    transition-delay: .3s;
+}
+.reveal-5{
+    transition-delay: .4s;
+}
+.reveal_2-2{
+    transition-delay: .1s;
+}
+.reveal_2-3{
+    transition-delay: .2s;
+}
+.reveal_2-4{
+    transition-delay: .3s;
+}
+.reveal_2-5{
+    transition-delay: .4s;
+}
+.reveal_3-2{
+    transition-delay: .1s;
+}
+.reveal_3-3{
+    transition-delay: .2s;
+}
+.reveal_3-4{
+    transition-delay: .3s;
+}
+.reveal_3-5{
+    transition-delay: .4s;
+}
+
+
+
+
+/* header section styling */
+
+
+header nav{
+    height: 15vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+header nav div.nav-content{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav div.nav-content div.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header nav div.nav-content div.left h1{
+    font-size: 38px;
+}
+header nav div.nav-content div.left p{
+    padding: 5px 0px 0px 30px;
+    font-size: 1.2rem;
+    
+}
+header nav div.nav-content div.right a{
+    padding-right: 20px;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* responsive nav */
+
+@media screen and (max-width: 600px){
+    header nav div.nav-content{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+/* home section styling */
+
+section.home{
+    width: 100%;
+    background-color: #f4f6f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.home div.home-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+section.home div.home-content div.left{
+    border-top: 2px solid #000;
+    width: 30%;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section.home div.home-content div.left h2{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+section.home div.home-content div.left h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    width: 80%;
+}
+section.home div.home-content div.left p{
+    font-size: 1.1rem;
+}
+section.home div.home-content div.left a{
+    width: 22vh;
+    background-color: #082d0f;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+section.home div.home-content div.right{
+    width: 60%;
+}
+section.home div.home-content div.right img{
+    width: 100%;
+}
+
+
+/* responsive home section */
+
+
+@media screen and (max-width: 1100px){
+    section.home div.home-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    section.home div.home-content div.left{
+        width: 90%;
+        margin-right: 0;
+        height: 75vh;
+    }
+    section.home div.home-content div.right{
+        margin-top: 10vh;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    section.home{
+        margin-top: 5vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* recette section styling */
+
+section.recette{
+    height: 120vh;
+}
+section.recette h1.title{
+    font-size: 2.2rem;
+    margin: 60px 0px 60px 80px;
+}
+section.recette div.recette-content{
+    display: flex;
+    justify-content: center;
+}
+section.recette div.recette-content div.boxs{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+section.recette div.recette-content div.boxs div.box{
+    width: 18%;
+    text-align: center;
+}
+
+section.recette div.recette-content div.boxs div.box div.top img{
+    width: 100%;
+}
+
+section.recette div.recette-content div.boxs div.box div.low{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section.recette div.recette-content div.boxs div.box div.low h2{
+    text-decoration: underline;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+section.recette div.recette-content div.boxs div.box div.low a{
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+section.recette div.recette-content div.boxs div.box div.low h2:hover,
+section.recette div.recette-content div.boxs div.box div.low a:hover{
+    text-decoration: none;
+}
+
+
+/* responsive recette section */
+
+@media screen and (max-width: 1000px){
+    section.recette div.recette-content div.boxs div.box{
+        width: 40%;
+    }
+    section.recette div.recette-content div.boxs div.box div.top img{
+        width: 65%;
+    }
+    
+}
+@media screen and (max-width: 600px){
+    section.recette div.recette-content div.boxs div.box{
+        width: 70%
+    }
+    section.recette h1.title{
+        margin: 60px 0px 60px 37%;
+    }
+}
+
+
+
+
+
+
+
+/* cooking section styling */
+
+div.cooking{
+    height: 30vh;
+    width: 100%;
+    background-color: #f4f6f2;
+    display: flex;
+    justify-content: center;
+}
+div.cooking div.cooking-content{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+div.cooking div.cooking-content div.right{
+    width: 70%;
+}
+div.cooking div.cooking-content div.right ul{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+div.cooking div.cooking-content div.right ul li a{
+    border: 2px solid #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px;
+    letter-spacing: 1px;
+    transition: .5s ease;
+    line-height: 60px;
+}
+div.cooking div.cooking-content div.right ul li a:hover{
+    background-color: #082d0f;
+    color: #fff;
+}
+
+
+
+/* responsive cooking section */
+
+@media screen and (max-width: 1200px){
+    div.cooking div.cooking-content{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    div.cooking{
+        height: 50vh;
+    }
+    div.cooking div.cooking-content div.right{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1000px){
+    div.cooking{
+        margin-top: 60%;
+    }
+}
+
+@media screen and (max-width: 601px){
+    div.cooking{
+        margin-top: 335%;
+    }
+    div.cooking div.cooking-content div.right ul{
+        margin-top: 5vh;
+    }
+}
+@media screen and (max-width: 490px){
+    div.cooking{
+        margin-top: 375%;
+    }
+}
+
+
+
+/* home about styling */
+
+section.about{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.about div.about-content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 90%;
+}
+section.about div.about-content div.right{
+    border-top: 2px solid #000;
+    width: 30%;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section.about div.about-content div.right h2{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+section.about div.about-content div.right h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    width: 80%;
+}
+section.about div.about-content div.right p{
+    font-size: 1.1rem;
+}
+section.about div.about-content div.right a{
+    width: 22vh;
+    background-color: #082d0f;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+section.about div.about-content div.left{
+    width: 60%;
+}
+section.about div.about-content div.left img{
+    width: 100%;
+}
+
+
+/* responsive about section */
+
+@media screen and (max-width: 1100px){
+    section.about div.about-content{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    section.about div.about-content div.right{
+        width: 90%;
+        margin-right: 0;
+        margin-top: 5vh;
+        height: 75vh;
+    }
+    section.about div.about-content div.left{
+        margin-top: 10vh;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/* lifestyle section styling */
+
+section.lifestyle{
+    height: 120vh;
+}
+section.lifestyle h1.title{
+    font-size: 2.2rem;
+    margin: 60px 0px 60px 80px;
+}
+section.lifestyle div.lifestyle-content{
+    display: flex;
+    justify-content: center;
+}
+section.lifestyle div.lifestyle-content div.boxs{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+section.lifestyle div.lifestyle-content div.boxs div.box{
+    width: 45%;
+    text-align: center;
+}
+
+section.lifestyle div.lifestyle-content div.boxs div.box div.top img{
+    width: 100%;
+}
+
+section.lifestyle div.lifestyle-content div.boxs div.box div.low{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section.lifestyle div.lifestyle-content div.boxs div.box div.low h2{
+    text-decoration: underline;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 2rem;
+}
+section.lifestyle div.lifestyle-content div.boxs div.box div.low p{
+    font-size: 1.2rem;
+}
+section.lifestyle div.lifestyle-content div.boxs div.box div.low a{
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+section.lifestyle div.lifestyle-content div.boxs div.box div.low h2:hover,
+section.lifestyle div.lifestyle-content div.boxs div.box div.low a:hover{
+    text-decoration: none;
+}
+
+
+/* responsive recette section */
+
+@media screen and (max-width: 1000px){
+    section.lifestyle div.lifestyle-content div.boxs div.box{
+        width: 70%;
+        height: 85vh;
+    }
+    section.lifestyle div.lifestyle-content div.boxs div.box div.top img{
+        width: 65%;
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    section.lifestyle h1.title{
+        margin: 60px 0px 60px 25%;
+    }
+    section.lifestyle div.lifestyle-content div.boxs div.box{
+        height: 75vh;
+    }
+    section.lifestyle div.lifestyle-content div.boxs div.box div.low p{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* footer section styling */
+
+
+footer{
+    width: 100%;
+    height: 60vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+footer div.footer-content{
+    padding-top: 15vh;
+    width: 90%;
+}
+footer div.footer-content div.boxs div.box a{
+    color: #fff;
+    text-transform: capitalize;
+    line-height: 50px;
+}
+footer div.footer-content div.boxs{
+    display: flex;
+    justify-content: space-around;
+}
+footer div.footer-content div.boxs div.box:nth-child(2){
+    width: 60vh;
+}
+footer div.footer-content div.boxs div.box:nth-child(2) div.top{
+    text-align: center;
+}
+footer div.footer-content div.boxs div.box{
+    height: 22vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer div.footer-content div.boxs div.box div.top a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+footer div.footer-content div.boxs div.box div.low a:hover{
+    border-bottom: 1px solid #fff;
+}
+footer div.footer-content div.boxs div.box div.low ul li input{
+    height: 6vh;
+    width: 100%;
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+}
+footer div.footer-content div.boxs div.box div.low ul li{
+    list-style: none;
+}
+footer div.footer-content div.boxs div.box div.low ul li button{
+    line-height: 40px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: bold;
+}
+
+
+/* responsive footer section */
+
+@media screen and (max-width: 1000px){
+    footer{
+        margin-top: 70vh;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    footer{
+        height: 100vh;
+    }
+    footer div.footer-content div.boxs{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer div.footer-content div.boxs div.box{
+        text-align: center;
+        justify-content: flex-start;
+    }
+    footer div.footer-content div.boxs div.box:nth-child(2){
+        width: 40vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* iphone 12 pro responsive */
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3){
+    section.home div.home-content div.right{
+        margin-top: 5vh;
+    }
+    section.recette h1.title{
+        margin: 60px 0px 60px 120px;
+    }
+}

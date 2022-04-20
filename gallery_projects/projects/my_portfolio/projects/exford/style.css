@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* similar */
+
+
+section.first,
+section.third{
+    height: 100vh;
+}
+section.home div.content div.button a,
+section.first div.content div.left div.button a,
+section.third div.content div.left div.button a,
+section.fifth div.cards div.card div.low div.button a,
+section.sixth div.content div.button a{
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+    line-height: 100px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+}
+section.first div.content div.left div.button a,
+section.third div.content div.left div.button a,
+section.fifth div.cards div.card div.low div.button a{
+    background-color: green;
+    color: #fff;
+    transition: 0.3s ease;
+}
+section.first div.content div.left div.button a:hover,
+section.third div.content div.left div.button a:hover,
+section.fifth div.cards div.card div.low div.button a:hover{
+    background-color: #006400;
+}
+
+
+
+/* nav styling */
+
+
+
+
+header nav{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+}
+header nav div.title{
+    line-height: 40px;
+    margin-top: 8vh;
+}
+header nav div.title h1{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+header nav div.title h4{
+    color: #6e6e6e;
+}
+header nav div.navbar ul{
+    line-height: 70px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+header nav div.navbar ul li{
+    color: green;
+    margin-right: 5vh;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+header nav div.navbar-logo ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+header nav div.navbar-logo ul li a{
+    color: #000;
+    margin-right: 3vh;
+    font-size: 25px;
+    transition: 0.5s ease;
+}
+header nav div.navbar-logo ul li a:hover{
+    color: green;
+}
+
+
+
+/* home section styling */
+
+
+section.home div.image{
+    width: 100%;
+    height: 80vh;
+    background-image: url('img/home.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    filter: brightness(50%);
+}
+
+section.home div.content{
+    position: absolute;
+    top: 60vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.home div.content div.text h1{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    font-size: 55px;
+    line-height: 120px;
+    font-weight: bold;
+}
+section.home div.content div.text p{
+    font-size: 20px;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+/* responsive home section */
+
+@media screen and (max-width: 688px) {
+    section.home div.content div.text h1{
+        line-height: 70px;
+        font-size: 35px;
+    }
+    section.home div.content div.text p{
+        line-height: 30px;
+        font-size: 16px;
+    }
+}
+
+
+
+/* first section styling */
+
+
+section.first div.content{
+    width: 100%;
+    height: 619px;
+    display: flex;
+    justify-content: center;
+    padding: 130px 0px 0px 200px;
+}
+section.first div.content div.right img{
+    width: 40rem;
+}
+section.first div.content div.left{
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0px 0px 20px;
+}
+section.first div.content div.left div.button{
+    text-align: center;
+    width: 55%;
+}
+
+section.first div.content div.left div.text h1{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 100px;
+}
+
+section.first div.content div.left div.text p{
+    font-size: 18px;
+    font-weight: 600;
+    width: 55%;
+    line-height: 30px;
+}
+
+
+/* responsive first section */
+
+@media screen and (max-width: 1312px) {
+    section.first div.content{
+        padding: 130px 0px 0px 50px;
+    }
+    section.first div.content div.right img{
+        width: 20rem;
+    }
+    section.first div.content div.left{
+        padding: 30px 0px 0px 20px;
+    }
+    section.first div.content div.left div.text h1{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 992px) {
+    section.first div.content{
+        padding: 130px 0px 0px 0px;
+        
+    }
+    section.first div.content div.right img{
+        width: 25rem;
+    }
+    section.first div.content div.left{
+        padding: 30px 0px 0px 20px;
+    }
+    section.first div.content div.left div.text h1{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    section.first div.content div.left div.text p{
+        font-size: 15px;
+        width: 100%;
+    }
+    section.first div.content div.left div.button{
+        width: 100%;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 800px) {
+    section.first div.content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* second section styling */
+
+section.second{
+    height: 90vh;
+}
+section.second div.content{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    height: 70vh;
+    background-color: #000;
+}
+section.second div.content div.right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+section.second div.content div.right img{
+    width: 100%;
+    max-height: 70vh;
+}
+section.second div.content div.left{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    width: 50%;
+}
+section.second div.content div.left h1{
+    font-size: 35px;
+    text-transform: capitalize;
+    line-height: 100px;
+    font-family: 'Rubik', sans-serif;
+}
+section.second div.content div.left p{
+    font-size: 18px;
+    line-height: 30px;
+    width: 95%;
+}
+
+/* responsive second section*/
+
+@media screen and (max-width: 1200px) {
+    section.second div.content{
+        height: 80vh;
+    }
+    section.second div.content div.right img{
+        padding-right: 0px;
+    }
+    section.second div.content div.left{
+        align-items: center;
+    }
+    section.second div.content div.left h1{
+        line-height: 40px;
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 688px) { 
+    section.second div.content div.left{
+        width: 100%;
+    }
+    section.second div.content{
+        flex-direction: column;
+        height: 105vh;
+    }
+    section.second div.content div.right{
+        width: 100%;
+    }
+}
+
+/* third section styling */
+
+section.third{
+    display: flex;
+    align-items: center;
+}
+section.third div.content{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+section.third div.content div.left{
+    width: 40%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.third div.content div.left div.text h1{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    font-size: 35px;
+    width: 70%;
+    margin-left: 40%;
+}
+
+section.third div.content div.left div.text p{
+    font-size: 18px;
+    font-weight: 600;
+    width: 55%;
+    margin-left: 40%;
+    line-height: 30px;
+    padding-top: 5vh;
+}
+section.third div.content div.left div.button{
+    margin-left: 33%;
+}
+section.third div.content div.right{
+    width: 60%;
+}
+section.third div.content div.right ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+section.third div.content div.right ul li{
+    list-style: none;
+    padding: 0px 20px 20px 0px;
+}
+
+section.third div.content div.right ul li img{
+    width: 330px;
+}
+
+
+/* responsive third section */
+
+
+@media screen and (max-width: 1420px) {
+    section.third{
+        margin-top: 50vh;
+        height: 200vh;
+        align-items: flex-start;
+    }
+    section.third div.content{
+        flex-direction: column;
+        align-items: center;
+    }
+    section.third div.content div.left{
+        width: 100%;
+    }
+    section.third div.content div.left div.text p{
+        margin-left: 0%;
+        width: 100%;
+    }
+    section.third div.content div.left div.text h1{
+        margin-left: 0%;
+        width: 100%;
+        text-align: center;
+    }
+    section.third div.content div.left div.button{
+        margin-left: 0%;
+    }
+    section.third div.content div.right ul{
+        justify-content: center;
+    }
+}
+
+
+/* fourth section styling */
+
+
+section.fourth{
+    height: 85vh;
+}
+section.fourth div.content{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 70vh;
+    background-color: #000;
+}
+section.fourth div.content div.left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+section.fourth div.content div.left img{
+    width: 100%;
+    max-height: 70vh;
+}
+section.fourth div.content div.right{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0px 0px 40px;
+    width: 50%;
+}
+section.fourth div.content div.right h1{
+    font-size: 35px;
+    text-transform: capitalize;
+    line-height: 100px;
+    font-family: 'Rubik', sans-serif;
+}
+section.fourth div.content div.right p{
+    font-size: 23px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    width: 95%;
+    font-style: italic;
+}
+section.fourth div.content div.right span{
+    font-size: 18px;
+    text-transform: capitalize;
+    padding-top: 20px;
+}
+
+/* responsive second section*/
+
+@media screen and (max-width: 1200px) {
+    section.fourth div.content div.left img{
+        padding-left: 10px;
+    }
+}
+
+
+
+
+/* fifth section styling */
+
+section.fifth{
+    height: 115vh;
+}
+section.fifth div.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.fifth div.text h1{
+    text-transform: capitalize;
+    font-size: 30px;
+    line-height: 100px;
+}
+section.fifth div.text p{
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 50%;
+}
+section.fifth div.cards{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section.fifth div.cards div.card div.top img{
+    width: 350px;
+}
+section.fifth div.cards div.card{
+    width: 350px;
+    margin-right: 10px;
+}
+section.fifth div.cards div.card div.low div.text h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 23px;
+}
+section.fifth div.cards div.card div.low div.text p{
+    font-size: 15px;
+    width: 100%;
+}
+section.fifth div.cards div.card div.low div.button{
+    text-align: center;
+}
+
+
+
+/* responsive fifth section */
+
+
+@media screen and (max-width: 1100px) {
+    section.fifth{
+        height: 200vh;
+    }
+}
+@media screen and (max-width: 720px) {
+    section.fifth{
+        height: 282vh;
+    }
+}
+
+
+
+
+/*sixth section styling */
+
+section.sixth{
+    height: 80vh;
+}
+section.sixth div.image{
+    width: 100%;
+    height: 80vh;
+    background-image: url('img/sixth.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    filter: brightness(50%);
+}
+
+section.sixth div.content{
+    position: relative;
+    bottom: 60vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.sixth div.content div.text h2{
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+}
+section.sixth div.content div.text h1{
+    font-family: 'Rubik', sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 55px;
+    line-height: 120px;
+    font-weight: bold;
+}
+section.sixth div.content div.text p{
+    font-size: 20px;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+/* responsive sixth section */
+
+@media screen and (max-width: 1312px) {
+}
+@media screen and (max-width: 688px) {
+    section.sixth div.content{
+        bottom: 75vh;
+    }
+    section.sixth div.content div.text h1{
+        font-size: 30px;
+    }
+    section.sixth div.content div.text h2{
+        font-size: 18px;
+    }
+}
+
+
+/* footer section */
+
+footer{
+    height: 20vh;
+    width: 100%;
+}
+footer div.content{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer div.content div.left{
+    display: flex;
+    flex-direction: row;
+}
+footer div.content div.left h3{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #6e6e6e;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+footer div.content div.left h3:hover{
+    color: green;
+}
+footer div.content div.left span{
+    font-weight: normal;
+    font-size: 18px;
+    text-transform: capitalize;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+footer div.content div.left span:hover{
+    color: green;
+}
+footer div.content div.right ul{
+    display: flex;
+    flex-direction: row;
+}
+footer div.content div.right ul li{
+    list-style: none;
+    margin-right: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+footer div.content div.right ul li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #6e6e6e;
+    font-weight: 900;
+    transition: 0.5s ease;
+}
+footer div.content div.right ul li a:hover{
+    color: green;
+}
+
+
+/* responsive footer */
+
+
+@media screen and (max-width: 1312px) {
+    footer{
+        width: 80%;
+    }
+}

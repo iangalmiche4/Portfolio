@@ -1,0 +1,1484 @@
+
+/*______________________ SIMILAR ______________________*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Quicksand', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+
+
+div.big-title h2{
+    font-size: 2rem;
+    text-align: center;
+    padding: 100px 0px 20px 0px;
+}
+div.sub-big-title{
+    display: flex;
+    justify-content: center;
+}
+div.sub-big-title p{
+    width: 35%;
+    color: #777777;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+header{
+    height: 100vh;
+    background: url('img/home-bcg.jpg');
+    background-position: 100% 55%;
+    background-size: cover;
+}
+
+/* responsive similar*/
+
+@media screen and (max-width: 1000px){
+    div.sub-big-title p{
+        width: 70%!important;
+    }
+}
+
+
+/*______________________ SCROLL UP BTN ______________________*/
+
+
+
+.scroll-up-btn{
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    background: #0000004d;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+	background-color: #f0a540;
+}
+
+
+
+
+
+/*______________________ NAV ______________________*/
+
+nav{
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+    height: 15vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+}
+nav div.nav-content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav div.left{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+nav div.left div.logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav div.left div.logo a{
+    width: 100%;
+    height: 100%;
+    background: url('img/logo-pet.png');
+    background-repeat: no-repeat;
+    
+}
+nav div.right{
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+nav ul.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+nav li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav li a{
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 15px;
+    transition: .3s ease;
+}
+nav li:last-child{
+    background-color: rgb(240, 165, 64);
+}
+
+/* sticky */
+
+
+.navbar.sticky{
+    background: #fff;
+}
+nav.navbar.sticky div.left div.logo a{
+    background: url('img/logo-pet-sticky.png');
+    background-repeat: no-repeat;
+}
+.navbar.sticky ul.nav-links li:not(:last-child) a{
+    color: #000;
+}
+.navbar.sticky ul.nav-links li a:hover{
+    color: #f0a540;
+}
+
+
+.navbar.stickys{
+    height: 10vh;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+nav.navbar.stickys div.left div.logo a{
+    height: 100px;
+}
+.navbar.stickys ul.nav-links li.nav-link a:hover{
+    color: #f0a540;
+}
+
+
+
+
+
+
+/* hamburger */
+
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+
+.hamburger:focus{
+    outline: none;
+}
+
+/* Burger animation */
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .burger div{
+    background-color: #000;
+}
+/* responsive nav */
+
+@media screen and (max-width: 1000px){
+    nav.navbar{
+        background-color: #333333;
+    }
+    nav.navbar.show div.nav-content{
+        display: flex;
+    }
+    nav.navbar.show{
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+    }
+    nav div.right {
+        width: 100%;
+    }
+    nav.navbar div.nav-content div.left{
+        display: none;
+    }
+    nav.navbar div.nav-content{
+        display: none;
+        width: 100%;
+    }
+    nav.navbar div.nav-content ul.nav-links{
+        flex-direction: column;
+        border-top: 1px solid #eee;
+        height: 100%;
+        width: 100%;
+    }
+    .navbar.sticky.show li.nav-link a{
+        color: #000;
+    }
+    nav li.nav-link:last-child{
+        background-color: transparent;
+    }
+    .hamburger{
+        display: block;
+        height: 10vh;
+    }
+    
+}
+
+
+
+
+/*______________________ HOME SECTION ______________________*/
+
+
+
+
+section.home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+section.home div.home-content{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+section.home div.home-title{
+    width: 70%;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 60px;
+}
+section.home div.home-text{
+    color: lightgray;
+    font-size: 1.2rem;
+    width: 70%;
+    line-height: 25px;
+}
+section.home div.home-link{
+    width: 45%;
+    transform: translateX(-92px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+section.home div.home-link a{
+    width: 77%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f0a540;
+    padding: 10px 20px;
+    border-radius: 3px;
+    transition: .5s ease;
+}
+section.home div.home-link a:hover{
+    background-color: #0000004d;
+    width: 83%;
+    padding: 15px 25px;
+}
+section.home div.home-link div.link-title{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+section.home div.home-link div.link{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p.home-sub-title{
+    margin-top: 10px;
+    color: #999999;
+    font-style: italic;
+}
+section.home div.home-link div.txt{
+    font-size: 1.2rem;
+}
+section.home div.home-icon i{
+    font-size: 2.5rem;
+    transition: .5s ease;
+}
+section.home div.home-icon i:hover{
+    transform: translateY(-5px);
+    color: #f0a540;
+}
+
+/* responsive home section */
+
+@media screen and (max-width: 1110px) {
+    section.home div.home-content{
+        height: 65%;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 900px) {
+    section.home div.home-content{
+        width: 90%;
+    }
+    p.home-sub-title{
+        color: #fff;
+    }
+    section.home div.home-title{
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section.home div.home-title{
+        width: 90%;
+        font-size: 1.2rem;
+        line-height: 40px;
+    }
+    section.home div.home-text{
+        font-size: 1rem;
+        width: 90%;
+    }
+    section.home div.home-link{
+        width: 80%;
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+
+/*______________________ FIRST SECTION ______________________*/
+
+
+
+
+section.first{
+    height: 200vh;
+}
+div.first-content{
+    width: 100%;
+    height: 100%;
+}
+section.first div.top{
+    width: 100%;
+    height: 60%;
+    background-color: #eef2f5;
+}
+
+section.first div.top div.cards-container{
+    width: 100%;
+    height: 67%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.first div.top ul.cards{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section.first div.top ul.cards li.card{
+    width: 270px;
+    height: 430px;
+    transition: .5s ease;
+}
+section.first div.top ul.cards li.card:hover{
+    transform: translateY(-20px);
+}
+section.first div.top li.card div.card-top{
+    height: 55%;
+}
+section.first div.top li.card div.card-top img{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+section.first div.top div.card-low{
+    background-color: #fff;
+    height: 39%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.first div.top div.card-low-container{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section.first div.top div.card-title h4{
+    font-size: 1.2rem;
+    color: #333333;
+}
+section.first div.top div.card-txt p{
+    color: #f0a540;
+    font-weight: 300;
+}
+section.first div.top div.card-link a{
+    color: #f0a540;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+
+
+/*______________________ FIRST LOW SECTION ______________________*/
+
+
+
+section.first div.low{
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+}
+section.first div.low div.low-left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.first div.low div.low-left-container{
+    width: 80%;
+    height: 80%;
+}
+section.first div.low div.low-left-top-container{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+section.first div.low div.low-left-top{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section.first div.low div.low-left-top p{
+    line-height: 30px;
+}
+section.first div.low div.low-left-top-title{
+    font-size: 2rem;
+}
+section.first div.low div.low-left-top-link{
+    width: 30%;
+    transform: translateX(-13px);
+    text-align: center;
+}
+section.first div.low div.low-left-top-link a{
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f0a540;
+    padding: 10px 20px;
+    border-radius: 3px;
+    transition: .5s ease;
+}
+section.first div.low div.low-left-top-link a:hover{
+    background-color: #444444;
+    padding: 15px 25px;
+}
+section.first div.low div.low-left-low{
+    height: 50%;
+}
+
+/* responsive first*/
+
+@media screen and (max-width: 1300px){
+    section.first div.low div.low-left-top-link{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    section.first div.low div.low-left-top-link{
+        width: 60%;
+    }
+}
+
+
+
+
+/*______________________ COUNTER-UP ______________________*/
+
+
+
+.counter-up{
+	min-height: 30vh;
+    width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 50px;
+	position: relative;
+}
+.counter-up .content{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    transform: translateX(-50px);
+}
+.counter-up .box{
+	width: 30%;
+    height: 100%;
+	border-radius: 5px;
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.counter-up .box.first{
+    color: #f0a540;
+}
+.counter-up .box.second{
+    color: #22c1c3;
+}
+.counter-up .box.third{
+    color: #bd3f32;
+}
+.counter-up .box div.counter{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+	font-size: 1.8rem;
+    font-weight: bold;
+}
+.counter-up .box div.text{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.counter-up .box div.text p{
+	font-size: 1.1rem;
+    font-weight: bold;
+	text-transform: capitalize;
+}
+
+
+
+
+
+section.first div.low div.low-right{
+    width: 50%;
+}
+
+
+/*______________________SECOND CAROUSEL______________________*/
+
+
+
+
+div.second-carousel{
+	height: 100%;
+}
+
+div.second-carousel .slider {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+div.second-carousel .slider__nav {
+  width: 12px;
+  height: 12px;
+  margin: 2rem 20px;
+  border-radius: 50%;
+  z-index: 10;
+  outline: 5px solid #f0a540;
+  opacity: 50%;
+  outline-offset: -10px;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+div.second-carousel .slider__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+          animation: check 0.4s linear forwards;
+}
+div.second-carousel .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+  left: 0%;
+}
+div.second-carousel .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+  left: -100%;
+}
+div.second-carousel .slider__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+div.second-carousel .slider__contents {
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.second-carousel ul.boxs{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+div.second-carousel ul.boxs li.box{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 3px;
+    border-top: 1px solid #EEE;
+    box-shadow: 0 1px 1px 0 rgb(10 16 34 / 20%);
+}
+div.second-carousel li.box div.left{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+div.second-carousel li.box div.left img{
+    border-radius: 50%;
+    margin-top: 30px;
+    width: 70px;
+}
+div.second-carousel li.box div.right{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+div.second-carousel li.box div.right div.box-txt{
+    margin-top: 30px;
+    text-align: start;
+    line-height: 30px;
+    font-size: 1.1rem;
+}
+div.second-carousel li.box div.right div.box-name p{
+    font-weight: bold;
+    text-align: start;
+    color: #555555;
+}
+div.second-carousel li.box div.right div.box-name span{
+    color: #999999;
+    font-size: .8rem;
+}
+
+@-webkit-keyframes check {
+  50% {
+    outline-color: #f0a540;
+    box-shadow: 0 0 0 6px #f0a540;
+  }
+  100% {
+    outline-color: #f0a540;
+    opacity: 100%;
+    box-shadow: 0 0 0 0 #f0a540;
+  }
+}
+
+@keyframes check {
+  50% {
+    outline-color: #f0a540;
+    box-shadow: 0 0 0 6px #f0a540;
+  }
+  100% {
+    outline-color: #f0a540;
+    opacity: 100%;
+    box-shadow: 0 0 0 0 #f0a540;
+  }
+}
+
+
+
+
+
+
+/* responsive first section */
+
+@media screen and (max-width: 1400px){
+    section.first{
+        height: 350vh;
+    }
+    section.first div.top ul.cards{
+        justify-content: space-evenly;
+    }
+}
+@media screen and (max-width: 1200px){
+    div.sub-big-title p {
+        width: 50%;
+    }
+    section.first div.low{
+        flex-direction: column;
+    }
+    section.first div.low div.low-left{
+        width: 100%;
+        height: 100%;
+    }
+    section.first div.low div.low-right {
+        width: 100%;
+        height: 100%;
+    }
+    div.second-carousel ul.boxs{
+        justify-content: center;
+    }
+    div.second-carousel ul.boxs li.box{
+        margin-bottom: 30px;
+        height: 45%;
+    }
+}
+
+@media screen and (max-width: 680px){
+    section.first{
+        height: 550vh;
+    }
+    .counter-up .content{
+        flex-direction: column;
+        transform: translateX(0px);
+    }
+    .counter-up .box {
+        width: 100%;
+        flex-direction: row;
+    }
+    div.sub-big-title p {
+        width: 80%;
+    }
+}
+
+
+
+
+/*______________________ GALLERY SECTION ______________________*/
+
+section.gallery{
+    min-height: 110.2vh;
+}
+section.gallery div.top{
+    background-color: #eef2f5;
+    padding-bottom: 50px;
+}
+
+section.gallery div.gallery-container{
+    display: flex;
+    width: 100%;
+    height: 80%;
+}
+section.gallery div.gallery-container div.container{
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+}
+section.gallery div.gallery-container div.container div.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: .2rem;
+    grid-template-areas: 
+            'img-1 img-2 img-3 img-3 img-4 img-5'
+            'img-6 img-7 img-3 img-3 img-8 img-9'
+            'img-10 img-11 img-12 img-13 img-14 img-15';
+}
+section.gallery div.gallery-container div.container div.gallery a{
+    width: 100%;
+    height: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+section.gallery div.gallery-container div.container div.gallery a p{
+    font-size: 2rem;
+    position: relative;
+    color: rgba(255, 255, 255, .7);
+    z-index: 100;
+    opacity: 0;
+    transition: opacity .5s;
+}
+section.gallery div.gallery-container div.container div.gallery a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: opacity .5s;
+}
+section.gallery div.gallery-container div.container div.gallery a:hover p,
+section.gallery div.gallery-container div.container div.gallery a:hover::before{
+    opacity: 1;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-1{
+    grid-area: img-1;
+    background-image: url('img/gallery1.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-2{
+    grid-area: img-2;
+    background-image: url('img/gallery2.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-3{
+    grid-area: img-3;
+    min-height: 20.2rem;
+    background-image: url('img/gallery3.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-4{
+    grid-area: img-4;
+    background-image: url('img/gallery4.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-5{
+    grid-area: img-5;
+    background-image: url('img/gallery5.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-6{
+    grid-area: img-6;
+    background-image: url('img/gallery6.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-7{
+    grid-area: img-7;
+    background-image: url('img/gallery7.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-8{
+    grid-area: img-8;
+    background-image: url('img/gallery8.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-9{
+    grid-area: img-9;
+    background-image: url('img/gallery9.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-10{
+    grid-area: img-10;
+    background-image: url('img/gallery10.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-11{
+    grid-area: img-11;
+    background-image: url('img/gallery11.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-12{
+    grid-area: img-12;
+    background-image: url('img/gallery12.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-13{
+    grid-area: img-13;
+    background-image: url('img/gallery13.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-14{
+    grid-area: img-14;
+    background-image: url('img/gallery14.jpg');
+    background-size: cover;
+}
+section.gallery div.gallery-container div.container div.gallery a.img-15{
+    grid-area: img-15;
+    background-image: url('img/gallery15.jpg');
+    background-size: cover;
+}
+
+
+/* responsive gallery section */
+
+@media screen and (max-width: 900px) {
+    section.gallery div.gallery-container div.container div.gallery{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            'img-1 img-3 img-3 img-2'
+            'img-4 img-5 img-6 img-7'
+            'img-8 img-9 img-10 img-11'
+            'img-12 img-13 img-14 img-15';
+    }
+    section.gallery div.gallery-container div.container div.gallery a.img-3{
+        min-height: 10rem;
+    }
+    section.gallery div.gallery-container div.container div.gallery a.img-14{
+        background-position: 5% 100%;
+    }
+    section.gallery div.gallery-container div.container div.gallery a.img-2{
+        background-position: 60% 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    section.gallery div.gallery-container div.container div.gallery{
+        grid-template-areas: 
+            'img-1 img-1 img-1 img-1'
+            'img-2 img-2 img-2 img-2'
+            'img-3 img-3 img-3 img-3'
+            'img-4 img-4 img-4 img-4'
+            'img-5 img-5 img-5 img-5'
+            'img-6 img-6 img-6 img-6'
+            'img-7 img-7 img-7 img-7'
+            'img-8 img-8 img-8 img-8'
+            'img-9 img-9 img-9 img-9'
+            'img-10 img-10 img-10 img-10'
+            'img-11 img-11 img-11 img-11'
+            'img-12 img-12 img-12 img-12'
+            'img-13 img-13 img-13 img-13'
+            'img-14 img-14 img-14 img-14'
+            'img-15 img-15 img-15 img-15';
+        
+    }
+    section.gallery div.gallery-container div.container div.gallery a.img-1{
+        background-position: 100% 10%;
+    }
+    section.gallery div.gallery-container div.container div.gallery a.img-2{
+        background-position: 100% 30%;
+    }
+    section.gallery div.gallery-container div.container div.gallery a.img-9{
+        background-position: 0 66%;
+    }
+    section.gallery div.gallery-container div.container div.gallery a.img-10{
+        background-position: 0 35%;
+    }
+    section.gallery div.gallery-container div.container div.gallery a.img-14{
+        background-position: 0 35%;
+    }
+}
+
+
+
+/* responsive gallery */
+
+
+@media screen and (max-width: 1200px){
+    div.sub-big-title p {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 680px){
+    div.sub-big-title p {
+        width: 80%;
+    }
+}
+
+
+
+
+/*______________________ PRODUCTS SECTION ______________________*/
+
+
+section.products{
+    height: 110vh;
+}
+div.products-content{
+    height: 100%;
+}
+section.products div.sub-big-title p{
+    width: 50%;
+}
+section.products div.low{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.products div.low-content{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section.products div.left{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.products div.left div.image{
+    width: 100%;
+}
+section.products div.right{
+    width: 65%;
+}
+ul.products-list{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+li.product-list{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+div.product-image{
+    height: 77%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.product-image img{
+    width: 230px;
+    transition: all .5s ease;
+}
+div.product-image img:hover{
+    width: 250px;
+}
+div.product-title h4{
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+div.product-title h4:hover{
+    color: #f0a540;
+}
+div.product-price p{
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #f0a540;
+}
+
+
+
+
+/* RESPONSIVE PRODUCTS SECTION */
+
+
+
+@media screen and (max-width: 1300px){
+    section.products div.sub-big-title p {
+        width: 80%;
+    }
+    div.product-image img{
+        width: 200px;
+        transition: all .5s ease;
+    }
+    div.product-image img:hover{
+        width: 220px;
+    }
+    ul.products-list{
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    section.products div.left{
+        display: none;
+    }
+    section.products div.right {
+        width: 100%;
+    }
+    ul.products-list{
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 700px){
+    section.products{
+        height: 200vh;
+    }
+    ul.products-list{
+        flex-direction: column;
+    }
+    li.product-list{
+        width: 100%;
+        height: 33%;
+    }
+    div.product-image img{
+        width: 150px;
+    }
+    div.product-image img:hover{
+        width: 180px;
+    }
+}
+
+
+
+
+/*______________________ GETPET SECTION ______________________*/
+
+section.getpet{
+    height: 80vh;
+    background-image: url('img/getpet-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+section.getpet div.getpet-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+section.getpet div.getpet-content{
+    color: #fff;
+    text-align: center;
+    height: 50%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+section.getpet div.getpet-sub-txt{
+    font-size: 1.5rem;
+}
+section.getpet div.getpet-txt{
+    font-size: 2rem;
+}
+section.getpet div.getpet-link{
+    line-height: 65px;
+}
+section.getpet div.getpet-link a{
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    font-weight: bold;
+    transition: .3s ease;
+}
+section.getpet div.getpet-link a:hover{
+    color: #000;
+    background-color: #fff;
+    padding: 12px 22px;
+    border-radius: 23px;
+    font-size: 1.1rem;
+}
+
+
+
+/* responsive getpet*/
+
+@media screen and (max-width: 1000px){
+    section.getpet div.getpet-container{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 600px){
+    section.getpet{
+        background-position: 50% 100%;
+    }
+    section.getpet div.getpet-container{
+        width: 90%;
+    }
+}
+
+
+
+
+
+/*______________________ HELP SECTION ______________________*/
+
+
+section.help{
+    height: 100vh;
+}
+section.help div.help-content{
+    height: 100%;
+}
+section.help div.sub-big-title p{
+    width: 50%;
+}
+section.help div.low{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.help div.low-content{
+    height: 80%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+section.help ul.help-cards{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section.help li.help-card{
+    width: 32%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    box-shadow: 0 1px 1px 0 rgb(10 16 34 / 20%);
+    cursor: pointer;
+}
+section.help li.help-card.one{
+    background-image: url('img/help-card1.jpg');
+}
+section.help li.help-card.two{
+    background-image: url('img/help-card2.jpg');
+}
+section.help li.help-card.three{
+    background-image: url('img/help-card3.jpg');
+}
+section.help div.help-card-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+section.help div.help-card-line{
+    width: 100%;
+    height: 5px;
+}
+section.help li.help-card:hover div.help-card-line{
+    background-color: #fff;
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
+    animation: lineffect .8s ease;
+}
+@keyframes lineffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section.help div.help-card-title{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+section.help div.help-card-text p{
+    line-height: 30px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+
+/* responsive help */
+
+
+@media screen and (max-width: 1300px){
+    section.help{
+        height: 150vh;
+    }
+    section.help li.help-card.one,
+    section.help li.help-card.three{
+        background-position: 80% 100%;
+    }
+}
+@media screen and (max-width: 1000px){
+    section.help{
+        height: 200vh;
+    }
+    section.help div.low-content{
+        height: 90%;
+    }
+    section.help ul.help-cards{
+        flex-direction: column;
+        height: 100%;
+    }
+    section.help li.help-card{
+        width: 100%;
+        height: 32%;
+    }
+    section.help li.help-card.one{
+        background-position: 100% 25%;
+    }
+    section.help li.help-card.two{
+        background-position: 100% 40%;
+    }
+    section.help li.help-card.three{
+        background-position: 100% 20%;
+    }
+}
+
+
+
+/*______________________ FOOTER ______________________*/
+
+
+footer{
+    height: 14vh;
+    background-color: rgba(0,0,0,.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer div.footer-container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer div.left{
+    display: flex;
+    align-items: center;
+}
+footer div.left p{
+    color: rgba(255,255,255,.4);
+}
+footer div.right{
+    width: 50%;
+}
+footer div.right ul.footer-medias{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer div.right div.logo i{
+    color: rgba(255,255,255,.4);
+    transition: .3s ease;
+}
+footer div.right div.logo i:hover{
+    color: #fff;
+}
+
+/* responsive footer*/
+
+@media screen and (max-width: 1300px){
+    footer{
+        height: 30vh;
+    }
+    footer div.footer-container{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    footer div.left{
+        width: 100%;
+        justify-content: center;
+    }
+    footer div.right{
+        width: 100%;
+        height: 50%;
+    }
+}
+@media screen and (max-width: 500px){
+    footer div.left p{
+        text-align: center;
+    }  
+}

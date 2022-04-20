@@ -1,0 +1,1420 @@
+
+/*______________________ SIMILAR ______________________*/
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+body{
+    background-color: #fff;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+section.contact,
+section.education{
+    min-height: 100vh;
+}
+
+
+.contact .contact-content,
+.services .serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 100px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: #010a3d;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #010a3d;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: #1C658C;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+
+/*______________________T-BAR______________________*/
+
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #E5E5E5;
+}
+  
+  /* Bar in */
+  ::-webkit-scrollbar-thumb {
+    background: #467b8d; 
+}
+  
+  /* Hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1C658C;
+}
+
+
+
+
+/*______________________ SCROLL UP BTN ______________________*/
+
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #467b8d;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn:hover{
+    background: #1C658C;
+}
+.scroll-up-btn:active{
+    background: #2979ff;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+/*______________________ SCROLL ANIMATION ______________________*/
+
+
+
+
+[class*= "reveal-"] {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+[class*= "reveal_2-"] {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.reveal-visible-2{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+[class*= "reveal_3-"] {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.reveal-visible-3{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+.reveal-2{
+    transition-delay: .1s;
+}
+.reveal-3{
+    transition-delay: .2s;
+}
+.reveal-4{
+    transition-delay: .3s;
+}
+.reveal-5{
+    transition-delay: .4s;
+}
+.reveal_2-2{
+    transition-delay: .1s;
+}
+.reveal_2-3{
+    transition-delay: .2s;
+}
+.reveal_2-4{
+    transition-delay: .3s;
+}
+.reveal_2-5{
+    transition-delay: .4s;
+}
+.reveal_3-2{
+    transition-delay: .1s;
+}
+.reveal_3-3{
+    transition-delay: .2s;
+}
+.reveal_3-4{
+    transition-delay: .3s;
+}
+.reveal_3-5{
+    transition-delay: .4s;
+}
+
+
+
+
+
+
+
+
+
+/*______________________ HOME ______________________*/
+
+
+
+section.home{
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("img/font_nav.jpg") no-repeat center;
+    background-size: cover;
+    background-position: 100% 44%;
+    position: relative;
+    overflow-x: hidden;  
+    height: 90vh;
+}
+
+section.home div.container-first{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+section.home div.container-first h1{
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+section.home div.container-first h1 span{
+    position: relative;
+}
+.typing{
+    color: #2979ff;
+}
+
+section.home div.container-first .container-btns{
+    position: relative;
+    top: 50px;
+}
+
+
+section.home div.container-first .container-btns .btn-first{
+    border: 2px solid #2979ff;
+    outline: none;
+    background: transparent;
+    font-size: 30px;
+    padding: 20px;
+    width: 300px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+section.home div.container-first .container-btns .btn-first:nth-child(1){
+    margin-right: 30px;
+}
+section.home div.container-first .container-btns .btn-first:hover{
+    transition: all 0.3s ease-in-out;
+    background: #2979ff;
+}
+
+section.home .lignes{
+    position: absolute;
+    top: 6%;
+    left: 5%;
+}
+section.home .l1{
+    width: 250px;
+    height: 3px;
+    background: #2979ff;
+    border-radius: 5px;
+}
+section.home .l2{
+    width: 140px;
+    height: 3px;
+    background: #2979ff;
+    border-radius: 5px;
+    position: relative;
+    top: 20px;
+}
+
+section.home .logo{
+    position: absolute;
+    color: #fff;
+    right: 2.9%;
+    top: 4%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+section.home .medias{
+    list-style: none;
+    position: absolute;
+    right: 3.3%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section.home .medias .bulle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    background: #f1f1f1;
+    cursor: pointer;
+    position: relative;
+}
+section.home .medias .bulle a{
+    display: flex;
+    align-items: center;
+}
+section.home .medias .bulle .logo-medias{
+    width: 40px;
+    height: 40px;
+}
+
+
+/* RESPONSIVE HOME */
+
+@media screen and (max-width : 900px){
+    section.home div.container-first h1{
+        font-size: 2rem;
+    }
+    section.home div.container-first .container-btns .btn-first{
+        font-size: 20px;
+        width: 200px;
+        padding: 10px;
+    }
+    section.home .medias .bulle{
+        width: 40px;
+        height: 40px;
+    }
+    section.home .medias .bulle .logo-medias{
+        width: 20px;
+        height: 20px;
+    }
+    
+}
+@media screen and (max-width : 600px){
+    section.home div.container-first h1{
+        font-size: 2rem;
+        width: 90%;
+    }
+    section.home div.container-first .container-btns .btn-first:nth-child(1){
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    
+}
+@media screen and (max-width : 500px){
+    section.home div.container-first h1{
+        font-size: 1.5rem;
+    }
+    
+}
+
+
+
+
+/*______________________ NAVBAR ______________________*/
+
+
+nav{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #040203;
+    transition: all .3s ease;
+	padding: 10px 0;
+}
+nav div.nav-content{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 7vh;
+}
+nav div.nav-content div.left{
+    width: 60%;
+}
+nav div.nav-content div.left ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav div.nav-content div.left ul.nav-links li a{
+    color: #f5f5f5;
+    font-size: 17px;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+nav div.nav-content div.left ul.nav-links li.active a{
+    color: #2979ff;
+}
+nav div.nav-content div.left ul.nav-links li a:hover{
+    color: #2979ff;
+}
+nav div.nav-content div.right div.arrow i{
+    font-size: 17px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s ease;
+}
+nav div.nav-content div.right div.arrow i:hover{
+    color: #2979ff;
+}
+
+
+/* STICKY */
+
+.navbar.sticky{
+    position: fixed;
+    top: 0%;
+    z-index: 1;
+}
+
+
+/* hamburger */
+
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+
+.hamburger:focus{
+    outline: none;
+}
+
+/* Burger animation */
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* responsive nav */
+
+@media screen and (max-width: 947px){
+    nav.navbar div.nav-content div.right div.arrow i{
+        display: none;
+    }
+    nav.navbar div.nav-content div.left{
+        width: 100%;
+    }
+    nav.navbar div.nav-content{
+        display: none;
+        width: 100%;
+    }
+    nav.navbar div.nav-content div.left ul.nav-links{
+        flex-direction: column;
+        padding-left: 5vh;
+        border-top: 1px solid #eee;
+        height: 100%;
+    }
+    nav.navbar.show div.nav-content div.left ul.nav-links li:not(:last-child){
+        border-bottom: 1px solid #eee;
+    }
+    nav.navbar.show div.nav-content{
+        display: flex;
+    }
+    nav.navbar.show{
+        height: 60vh;
+    }
+    .hamburger{
+        display: block;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+/*______________________ ABOUT ______________________*/
+
+
+
+.about .title::after{
+    content: "who i am";
+}
+
+
+.about {
+    width: 100%;
+    height: 100%;
+}
+.about.stic{
+    margin-top: 10vh;
+}
+.index-container {      
+    z-index: 1;
+    position: relative;
+    top: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+.card-container{    
+    text-align: center;
+}
+
+.card-container img {       
+    width: 600px;
+    height: 400px;
+}
+
+.card-container h2{        
+    padding-top: 10px;
+    font-size: 35px;
+    color: #467b8d;
+}
+
+.card-container #main-card ul{
+    height: 200px;
+}
+.card-container ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-container li {        
+    display: block;
+    color: #010a3d;
+    font-size: 23px;
+    letter-spacing: 1px;
+    width: 90%;
+}
+
+#main-card{                
+    margin: 0px 350px;
+    font-family: 'poppins';
+    width: 600px;
+    height: 800px;
+    display: inline-block;
+    transition: 0.3s;
+    background-color: #00000005;
+}
+#main-card button a{
+    color: #010a3d;
+    transition: 0.4s;
+}
+#main-card button:hover a{
+    color: #fff;
+}
+
+
+
+
+/*EFFET REVERSE*/
+
+.flip-effect {
+    perspective: 2000px;
+    display: inline-block;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 150px;
+}
+
+.flip-effect li{
+    width: 100%;
+}
+
+#card {                              
+    width: 600px;
+    height: 700px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+
+#card.is-flipped {            
+    transform: rotateY(180deg);
+}
+
+#card2 {                         
+    width: 600px;
+    height: 700px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+
+#card2.is-flipped2 {              
+    transform: rotateY(180deg);
+}
+
+
+
+/*CARDS REVERSE DESIGN*/
+
+.front {            
+    background-color: #00000005;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+.front ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30%;
+}
+.front button,
+#main-card button{   
+    width: 40%;       
+    border: 2px solid #010a3d;
+    background-color: #f0f0f0;
+    padding: 20px 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+    outline: none;
+}
+.front button:hover,
+#main-card button:hover{
+    background-color: #467b8d;   
+    border-color: #467b8d;
+    color: white;
+}
+.front li{
+    display: flex;
+    justify-content: center;
+}
+.front P{
+    width: 80%;
+}
+
+.back {             
+    position: absolute;
+    background-color: #f0f0f0;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.back h3{
+    color: #467b8d;
+}
+.back li{
+    line-height: 50px;
+}
+.back .sub-title{
+    color: #1C658C;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.back button{           
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #467b8d;
+    color: white;
+    padding: 20px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.back button:hover{
+    color: #040203;
+    background-color: white;
+    box-shadow: 0 0 20px 5px white;
+}
+
+.flip-effect li{        
+    padding-top: 7px;
+    color: #040203;
+}
+
+
+
+/* responsive about section */
+
+
+@media (max-width: 1300px) {
+
+    .flip-effect {          
+        padding-top: 50px;
+    }
+
+    .card-container img {       
+        width: 450px;
+        height: 300px;
+    }
+    
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container li {        
+        font-size: 18px;
+    }
+    
+
+    #main-card{                 
+        margin: 0 0px;
+        background-color: white;
+        font-family: 'poppins';
+        width: 450px;
+        height: 615px;
+        display: inline-block;
+        transition: 0.3s;
+    }
+    
+    #card {       
+        margin: 0 0px;                
+        width: 450px;
+        height: 690px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    #card2 {      
+        margin: 0 0px;                  
+        width: 450px;
+        height: 550px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    .flip-effect {          
+        padding-top: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .card-container img {       
+        width: 370px;
+        height: 250px;
+    }
+
+    .card-container li {        
+        font-size: 18px;
+    }
+    
+
+    #main-card{                 
+        width: 370px;
+        height: 600px;
+        display: inline-block;
+        transition: 0.3s;
+    }
+    
+    #card {       
+        margin: 0 0px;                
+        width: 370px;
+        height: 700px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    #card2 {  
+        margin: 0 0px;                      
+        width: 370px;
+        height: 600px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .front{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .front button,
+    #main-card button{   
+        width: 60%;   
+    }
+
+}
+
+
+
+/*______________________ EXPERIENCE + EDUCATION______________________*/
+
+
+section.experience{
+    height: 130vh;
+}
+.experience .title::after{
+    content: "what i know";
+}
+.education .title::after{
+    content: "my schooling";
+}
+section.experience div.experience-content,
+section.education div.education-content{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.experience div.box-area,
+section.education div.box-area{
+    width: 90%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+section.experience div.box-area ul.boxs,
+section.education div.box-area ul.boxs{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+section.experience ul.boxs li.box,
+section.education ul.boxs li.box{
+    width: 90%;
+    height: 30%;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section.experience ul.boxs li.box div.left{
+    width: 35%;
+    background-color: #467b8d;
+}
+section.experience ul.boxs div.left-content{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #f5f5f5;
+    text-align: center;
+}
+section.experience div.left-content div.date,
+section.education div.left-content div.date{
+    text-transform: capitalize;
+}
+section.experience div.left-content div.text,
+section.education div.left-content div.text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} 
+section.experience ul.boxs div.left-content h3,
+section.education ul.boxs div.left-content h3{
+    font-size: 22px;
+    width: 80%;
+}
+section.experience ul.boxs li.box div.right,
+section.education ul.boxs li.box div.right{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.experience ul.boxs div.right-content,
+section.education ul.boxs div.right-content{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: start;
+}
+section.experience div.right-content h4,
+section.education div.right-content h4{
+    font-size: 18px;
+    color: #467b8d
+}
+section.experience div.right-content p,
+section.education div.right-content p{
+    color: #010a3d;
+}
+section.experience div.right-content a{
+    border: 2px solid #467b8d;
+    color: #010a3d;
+    padding: 8px 16px;
+    transition: .4s;
+}
+section.experience div.right-content a:hover{
+    background-color: #467b8d;
+    color: #fff;
+}
+
+
+/* responsive experience section */
+
+@media (max-width: 1300px) {
+
+    section.experience{
+        height: 150vh;
+    }
+
+}
+@media (max-width: 800px) {
+
+    section.experience{
+        height: 200vh;
+    }
+    section.experience ul.boxs li.box div.left{
+        width: 50%;
+    }
+    section.experience ul.boxs div.left-content h3{
+        font-size: 18px;
+        width: 100%;
+    }
+    section.experience div.right-content h4{
+        font-size: 16px;
+    }
+
+}
+@media (max-width: 600px) {
+
+    section.experience{
+        height: 250vh;
+    }
+
+}
+
+
+
+
+
+/*______________________ EDUCATION ______________________*/
+
+
+
+section.education{
+    height: 120vh;
+}
+section.education .title::after{
+    content: "background";
+}
+section.education ul.boxs li.box.first{
+    height: 70%;
+}
+section.education ul.boxs li.box.second{
+    height: 20%;
+}
+
+section.education ul.boxs li.box.second div.right-content{
+    height: 40%;
+}
+
+section.education ul.hard_skills li p{
+    text-align: start;
+    line-height: 25px;
+    color: #555555;
+}
+section.education ul.hard_skills span{
+    font-weight: bold;
+    color: #467b8d;
+}
+section.education ul.boxs li.box div.left{
+    width: 45%;
+}
+section.education ul.boxs div.left-content{
+    height: 100%;
+}
+section.education ul.boxs div.left-content.first{
+    background: url('img/esilv.jpg');
+    background-size: cover;
+    background-position: 95% 100%;
+}
+section.education ul.boxs div.left-content.second{
+    background: url('img/jeanne.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 80%;
+}
+
+section.education div.right-content div.sub-title{
+    display: flex;
+    justify-content: center;
+}
+section.education div.right-content div.sub-title.second h4{
+    width: 75%;
+}
+
+
+
+
+/* responsive education section */
+
+@media (max-width: 1300px) {
+
+    section.education{
+        height: 150vh;
+    }
+
+}
+@media (max-width: 800px) {
+
+    section.education{
+        height: 180vh;
+    }
+
+}
+@media (max-width: 600px) {
+    section.education ul.boxs li.box div.left{
+        display: none;
+    }
+    section.education div.right-content h4{
+        text-align: center;
+    }
+
+}
+
+
+/*______________________ PROJECTS ______________________*/
+
+
+
+section.projects .title::after{
+    content: "my succeses";
+}
+
+
+section.projects{
+    min-height: 160vh;
+}
+
+section.projects div.projects-content{
+    display: flex;
+    width: 100%;
+    height: 80%;
+}
+section.projects div.projects-content div.container{
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+section.projects div.projects-content div.container div.gallery{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-areas: 
+            'img-6 img-2 img-3 img-3'
+            'img-7 img-7 img-4 img-5'
+            'img-1 img-1 img-8 img-8';
+}
+section.projects div.projects-content div.container div.gallery a{
+    width: 100%;
+    height: 25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #aaaaaa;
+}
+section.projects div.projects-content div.container div.gallery a p{
+    font-size: 3rem;
+    position: relative;
+    color: rgba(255, 255, 255, .6);
+    z-index: 100;
+    padding: .5rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, .6);
+    border-radius: .4rem;
+    opacity: 0;
+    transition: opacity .5s;
+}
+section.projects div.projects-content div.container div.gallery a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    transition: opacity .5s;
+}
+section.projects div.projects-content div.container div.gallery a:hover p,
+section.projects div.projects-content div.container div.gallery a:hover::before{
+    opacity: 1;
+}
+section.projects div.projects-content div.container div.gallery a.img-1{
+    grid-area: img-1;
+    background-image: url('img/prev_byrne.jpeg');
+    background-position: 100% 58%;
+}
+section.projects div.projects-content div.container div.gallery a.img-2{
+    grid-area: img-2;
+    background-image: url('img/prev_karuna.jpg');
+    background-position: 100% 17%;
+}
+section.projects div.projects-content div.container div.gallery a.img-3{
+    grid-area: img-3;
+    background-image: url('img/prev_car.jpg');
+}
+section.projects div.projects-content div.container div.gallery a.img-4{
+    grid-area: img-4;
+    background-image: url('img/prev_twentyseventeen.jpg');
+    background-position: 100% 0%;
+}
+section.projects div.projects-content div.container div.gallery a.img-5{
+    grid-area: img-5;
+    background-image: url('img/prev_balasana.png');
+    background-position: 100% 27%;
+}
+section.projects div.projects-content div.container div.gallery a.img-6{
+    grid-area: img-6;
+    background-image: url('img/prev_exford.png');
+    background-position: 100% 94%;
+}
+section.projects div.projects-content div.container div.gallery a.img-7{
+    grid-area: img-7;
+    background-image: url('img/prev_pet.jpg');
+    background-position: 20% 100%;
+}
+section.projects div.projects-content div.container div.gallery a.img-8{
+    grid-area: img-8;
+    background-image: url('img/prev_space.webp');
+}
+
+
+
+/* responsive third section */
+
+@media screen and (max-width: 900px) {
+    section.projects div.projects-content div.container div.gallery{
+        grid-template-areas: 
+            'img-6 img-6 img-2 img-2'
+            'img-6 img-6 img-3 img-3'
+            'img-7 img-7 img-5 img-5'
+            'img-1 img-1 img-5 img-5'
+            'img-4 img-4 img-8 img-8';
+    }
+    section.projects div.projects-content div.container div.gallery a{
+        height: 20rem;
+    }
+    section.projects div.projects-content div.container div.gallery a.img-5{
+        min-height: 41rem;
+    }
+    section.projects div.projects-content div.container div.gallery a.img-6{
+        min-height: 41rem;
+        background-position: 100% 80%;
+    }
+}
+@media screen and (max-width: 600px) {
+    section.projects div.projects-content div.container div.gallery{
+        grid-template-areas: 
+            'img-1 img-1 img-1 img-1'
+            'img-2 img-2 img-2 img-2'
+            'img-3 img-3 img-3 img-3'
+            'img-4 img-4 img-4 img-4'
+            'img-5 img-5 img-5 img-5'
+            'img-6 img-6 img-6 img-6'
+            'img-7 img-7 img-7 img-7'
+            'img-8 img-8 img-8 img-8';
+    }
+    section.projects div.projects-content div.container div.gallery a,
+    section.projects div.projects-content div.container div.gallery a.img-5,
+    section.projects div.projects-content div.container div.gallery a.img-6{
+        min-height: 13rem;
+        height: 13rem;
+    }
+    section.projects div.projects-content div.container div.gallery a.img-5{
+        background-position: 100% 10%;
+    }
+    section.projects div.projects-content div.container div.gallery a.img-6{
+        background-position: 100% 5%;
+    }
+}
+
+
+
+
+
+
+/*______________________ CONTACT ______________________*/
+
+
+
+
+
+.contact .title::after{
+    content: "get in touch";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #467b8d;
+}
+.contact .contact-content .left p{
+    width: 80%;
+    text-align: justify;
+    line-height: 20px;
+    font-size: 16px;
+    color: #010a3d;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+    color: #040203;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: #467b8d;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+    color: #467b8d;
+}
+.contact .contact-content .info .sub-title{
+    color: #040203;
+}
+.contact .contact-content .info .sub-title.second{
+    width: 55%;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 200px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #467b8d;
+    background: #467b8d;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    background: #1C658C;
+    border: #1C658C;
+}
+
+
+
+/* responsive contact */
+
+@media screen and (max-width: 800px){
+    section.contact{
+        min-height: 150vh;
+    }
+    section.contact .max-width{
+        padding: 0 20px;
+        margin: 0;
+    }
+    .contact .contact-content{
+        flex-direction: column;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+        align-items: center;
+    }
+    .contact .contact-content .info .sub-title.second {
+        width: 70%;
+    }
+    section.contact .title::after{
+        font-size: 15px;
+    }
+   
+}
+@media screen and (max-width: 500px){
+    section.contact{
+        min-height: 120vh;
+    }
+}
+
+/*______________________ FOOTER ______________________*/
+
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    line-height: 60px;
+}
+footer span{
+    text-transform: capitalize;
+}
+footer span a{
+    color: #2979ff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+/* responsive footer */
+
+@media screen and (max-width: 600px){
+    footer{
+        margin-top: 30px;
+    }
+   
+}
+
+
+
+
+
+
+

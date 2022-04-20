@@ -1,0 +1,850 @@
+/*______________________ SIMILAR ______________________*/
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500;600&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Quicksand', sans-serif;
+}
+a span{
+    background: #e82626 !important;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+div.section{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.fp-tableCell {
+    position: relative;
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.section div.container{
+    position: relative;
+    width: 80%;
+    height: 80%;
+}
+
+.fp-tableCell {
+    position: relative;
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.section div.container div.content{
+    height: 90%;
+    position: relative;
+}
+div.nav-title{
+    position: relative;
+    bottom: 20%;
+    right: 4%;
+    width: 100px;
+}
+
+div.nav-title h4{
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+
+
+
+/*______________________ RESPONSIVE NAV TITLE ______________________*/
+
+@media screen and (max-width: 1300px){
+    div.nav-title{
+        right: 3%;
+    }
+}
+@media screen and (max-width: 1100px){
+    div.nav-title{
+        right: 2%;
+    }
+}
+@media screen and (max-width: 1000px){
+    div.nav-title{
+        right: 0%;
+    }
+}
+@media screen and (max-width: 800px){
+    div.nav-title{
+        right: -1%;
+    }
+}
+
+
+/*______________________ BACKGROUND TEXT ______________________*/
+
+.wartermark {
+    position: fixed;
+    left: 0%;
+    top: auto;
+    right: 0%;
+    bottom: 0%;
+    z-index: -1;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.03);
+    font-size: 300px;
+    line-height: 180px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+/*______________________ NAVBAR ______________________*/
+
+nav.navbar{
+    position: fixed;
+    width: 100%;
+    height: 10.1vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+nav.navbar div.navbar-container{
+    width: 92%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+nav.navbar div.navbar-container div.left img{
+    width: 120px;
+}
+nav.navbar div.navbar-container div.right img{
+    width: 20px;
+}
+
+
+
+/*______________________ BOTTOM NAV ______________________*/
+
+
+div.bottom-navbar{
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.bottom-navbar div.left{
+    width: 18%;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+}
+div.bottom-navbar div.left ul.medias{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.bottom-navbar ul.medias li a{
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #000;
+}
+div.bottom-navbar div.right{
+    display: flex;
+    align-items: flex-end;
+}
+div.bottom-navbar div.right a{
+    background-color: #000;
+    color: #fff;
+    padding: 4px 40px;
+    line-height: 7vh;
+    cursor: pointer;
+}
+
+
+
+
+/*______________________ LEFT NAV ______________________*/
+
+
+#fp-nav.fp-right{
+    left: 17px;
+    right: none;
+    width: 110px;
+    overflow: hidden;
+}
+#fp-nav ul li{
+    margin: 20px;
+}
+#fp-nav ul li:not(:first-child){
+    margin-top: 30px;
+}
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span{
+    border-radius: 5px;
+    width: 40px;
+    height: 1.5px;
+    margin: 0;
+    transition: all 0.3s;
+}
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    width: 70px;
+    height: 1.5px;
+    border-radius: 5px;
+    margin: 0;
+    background: #000 !important;
+}
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    width: 70px;
+    height: 1.5px;
+    border-radius: 5px;
+    margin: 0;
+    background: #000 !important;
+}
+#fp-nav ul li:hover a span, 
+.fp-slidesNav ul li:hover a span {
+    width: 70px;
+    height: 2px;
+    margin: 0;
+}
+
+
+
+
+/*______________________ RESPONSIVE LEFT NAV ______________________*/
+
+
+
+@media screen and (max-width: 800px){
+    #fp-nav.fp-right {
+        left: 10px;
+        right: none;
+    }
+    #fp-nav ul li a span, 
+    .fp-slidesNav ul li a span{
+        width: 20px;
+    }
+    #fp-nav ul li a.active span,
+    #fp-nav ul li:hover a.active span,
+    .fp-slidesNav ul li a.active span,
+    .fp-slidesNav ul li:hover a.active span{
+        width: 50px;
+    }
+    #fp-nav ul li a.active span,
+    #fp-nav ul li:hover a.active span,
+    .fp-slidesNav ul li a.active span,
+    .fp-slidesNav ul li:hover a.active span{
+        width: 50px;
+    }
+    #fp-nav ul li:hover a span, 
+    .fp-slidesNav ul li:hover a span {
+        width: 50px;
+    }
+    
+}
+
+
+
+
+
+
+/*______________________ FIRST SECTION ______________________*/
+
+
+div.section.s1 div.container div.content{
+    display: flex;
+    flex-direction: row;
+}
+div.section.s1 div.left{
+    position: absolute;
+    width: 60%;
+    left: 2%;
+    top: 34%;
+    z-index: 3;
+}
+
+div.section.s1 div.left div.title h1{
+    font-size: 5rem;
+    font-family: 'Public', sans-serif;
+    text-align: start;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+div.section.s1 div.left div.text{
+    width: 60%;
+    margin-top: 10px;
+}
+div.section.s1 div.left div.text p{
+    font-weight: 500;
+    line-height: 22px;
+}
+div.section.s1 div.right{
+    transform: translate(58%, 0.2%);
+}
+div.section.s1 div.right img{
+    width: 875px;
+}
+
+/*______________________ SCROLLDOWN TEXT ______________________*/
+
+.scrollDown {
+    position: fixed;
+    bottom: 80px;
+    left: 55px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    writing-mode: vertical-rl;
+    color: #000;
+    z-index: 4;
+    text-transform: uppercase;
+}
+.scrollDown:after {
+    content: "";
+    width: 1.7px;
+    height: 64px;
+    border-radius: 5px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -80px;
+}
+
+
+
+/*______________________ RESPONSIVE SCROLLDOWN TEXT ______________________*/
+
+
+@media screen and (max-width: 800px){
+    .scrollDown{
+        left: 38px;
+    }
+}
+
+/*______________________ RESPONSIVE FIRST SECTION ______________________*/
+
+
+@media screen and (max-width: 1500px){
+    div.section.s1 div.left{
+        width: 70%;
+    }    
+    div.section.s1 div.right img{
+        width: 700px;
+    }
+    div.section.s1 div.right {
+        transform: translate(85%, 8.9%);
+    }
+    div.bottom-navbar div.right a{
+        padding: 7px 40px;
+    }
+}
+
+
+@media screen and (max-width: 1400px){
+    div.bottom-navbar div.left {
+        width: 22%;
+    }
+}
+@media screen and (max-width: 1100px){
+    div.bottom-navbar div.left {
+        width: 30%;
+    }
+    div.section.s1 div.left{
+        width: 80%;
+    }    
+    div.section.s1 div.right img{
+        width: 600px;
+    }
+    div.section.s1 div.right {
+        transform: translate(70%, 14%);
+    }
+}
+@media screen and (max-width: 950px){
+    div.section.s1 div.left{
+        width: 100%;
+        top: 30%;
+    }  
+    div.section.s1 div.right {
+        display: none;
+    }
+    div.section.s1 div.left div.title h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    div.section.s1 div.left div.text{
+        width: 90%;
+        text-align: end;
+    }
+}
+@media screen and (max-width: 800px){
+    div.bottom-navbar div.left {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 530px){
+    .scrollDown{
+        display: none;
+    }
+    div.section.s1 div.left div.title h1{
+        font-size: 2rem;
+    }
+    div.section.s1 div.left div.text{
+        width: 90%;
+    }
+    div.section.s1 div.left div.text p{
+        font-size: 0.9rem;
+        line-height: 20px;
+    }
+    div.bottom-navbar div.left{
+        width: 65%;
+        margin-left: 10px;
+    }
+    div.bottom-navbar div.right a{
+        padding: 5px 20px;
+    }
+}
+
+
+
+
+
+/*______________________ SECOND SECTION ______________________*/
+
+
+div.section.s2 div.container div.content{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+div.section.s2 ul.boxs{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+div.section.s2 ul.boxs li.box{
+    background-color: #f3f3f3;
+    width: 50%;
+    height: 230px;
+    border: 1px solid #dbdbdb;
+    transition: all 300ms ease;
+}
+div.section.s2 ul.boxs li.box:hover{
+    transform: scale(1.02);
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%);
+    z-index: 1;
+}
+
+div.section.s2 li.box a.box-content{
+    color: #000;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+div.section.s2 li.box div.date{
+    color: rgba(0,0,0, 0.8);
+    font-weight: 500;
+}
+div.section.s2 li.box div.text p{
+    font-weight: 500;
+    width: 95%;
+}
+div.section.s2 li.box div.link p{
+    color: #e82626;
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+
+/*______________________ RESPONSIVE SECOND SECTION ______________________*/
+
+@media screen and (max-width: 1100px){
+    div.section.s2 div.container {
+        height: 100%;
+    }
+    div.section.s2 ul.boxs{
+        width: 90%;
+    }
+    div.section.s2 ul.boxs li.box{
+        height: 250px;
+    }
+    div.section.s2 li.box a.box-content{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 900px){
+    div.section.s2 div.container {
+        width: 90%;
+    }
+    div.section.s2 a.box-content div.title h2{
+        font-size: 1.2rem;
+    }
+    div.section.s2 li.box div.date{
+        font-size: 0.9rem;
+    }
+    div.section.s2 li.box div.text p{
+        font-size: 0.9rem;
+    }
+    div.section.s2 li.box div.link p{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 600px){
+    div.section.s2 div.container {
+        width: 95%;
+    }
+    div.section.s2 a.box-content div.title h2{
+        font-size: 1rem;
+    }
+    div.section.s2 li.box div.date{
+        font-size: 0.8rem;
+    }
+    div.section.s2 li.box div.text p{
+        font-size: 0.8rem;
+    }
+    div.section.s2 li.box div.link p{
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+/*______________________ THIRD SECTION ______________________*/
+
+
+
+div.section.s3 div.container div.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+div.section.s3 div.container div.title h2{
+    font-weight: 500;
+    padding: 0px 10px;
+}
+div.section.s3 div.container div.title h2:first-child{
+    border-right: #dddddd 1px solid;
+    color: #e82626;
+}
+div.section.s3 div.container div.content{
+    display: flex;
+    align-items: center;
+}
+div.section.s3 div.content div.boxs{
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+div.section.s3 div.left{
+    width: 50%;
+}
+div.section.s3 div.left .customer-img {
+    height: 100%;
+    width: 400px;
+    background-image: url('../img/testimonial1.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+}
+div.section.s3 div.right{
+    padding: 20px 40px;
+}
+div.section.s3 div.right div.right-content{
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+div.section.s3 div.right-content div.name{
+    font-size: 0.9rem;
+}
+div.section.s3 div.right-content div.info p{
+    color: rgba(0,0,0, 0.8);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+div.section.s3 div.right-content div.text{
+    margin-top: 20px;
+}
+div.section.s3 div.right-content div.text p{
+    width: 70%;
+    font-weight: 500;
+}
+
+
+
+
+/*______________________ FOURTH SECTION ______________________*/
+
+
+div.section.s4 div.boxs{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.section.s4 div.boxs div.left{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dbdbdb;
+}
+div.section.s4 div.boxs div.left div.info{
+    height: 50%;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 25px;
+}
+div.section.s4 div.boxs div.left div.info-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+div.section.s4 div.boxs div.left div.info p{
+    font-weight: 500;
+    color: #4d4d4d;
+}
+div.section.s4 div.boxs div.left div.map{
+    height: 50%;
+    width: 100%;
+    background: url('../img/contact_map.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+div.section.s4 div.boxs div.right{
+    width: 49%;
+    border: 10px solid #dbdbdb;
+    background-color: #fff;
+}
+div.section.s4 div.boxs div.right-content{
+    height: 100%;
+    padding: 10px 24px;
+    display: flex;
+    flex-direction: column;
+}
+div.section.s4 div.boxs div.right-title{
+    line-height: 40px;
+}
+
+div.section.s4 div.right div.formulaire{
+    height: 100%;
+}
+div.section.s4 div.right div.formulaire form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.section.s4 div.right .textarea {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    min-height: 120px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px none #000;
+    background-color: #f5f5f5;
+    padding: 8px 12px;
+}
+
+
+div.section.s4 .input-field {
+    display: inline-block;
+    width: 48%;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border-style: none none solid;
+    border-width: 1px;
+    border-color: #000;
+    background-color: hsla(0, 0%, 100%, 0);
+}
+div.section.s4 .w-select {
+    height: 38px;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    vertical-align: middle;
+    border: 1px solid #cccccc;
+}
+div.section.s4 div.inputs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+div.section.s4 div.inputs .w-input{
+    height: 38px;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    vertical-align: middle;
+    border-bottom: 1px solid #cccccc;
+}
+
+
+div.section.s4 .submit-button-2 {
+    display: block;
+    background-color: #e82626;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+div.section.s4 .w-button {
+    padding: 9px 15px;
+    width: 150px;
+    color: white;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*______________________ SCROLL ANIMATION ______________________*/
+
+
+
+
+[class*= "reveal-"] {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+[class*= "reveal_2-"] {
+    opacity: 0;
+    transform: translateX(30px);
+}
+.reveal-visible-2{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+[class*= "reveal_3-"] {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+.reveal-visible-3{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+[class*= "reveal_4-"] {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+.reveal-visible-4{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+.reveal-2{
+    transition-delay: .2s;
+}
+.reveal-3{
+    transition-delay: .4s;
+}
+.reveal-4{
+    transition-delay: .6s;
+}
+.reveal-5{
+    transition-delay: .8s;
+}
+.reveal-6{
+    transition-delay: 1.2s;
+}
+.reveal_2-2{
+    transition-delay: .2s;
+}
+.reveal_2-3{
+    transition-delay: .4s;
+}
+.reveal_2-4{
+    transition-delay: .6s;
+}
+.reveal_2-5{
+    transition-delay: .8s;
+}
+.reveal_3-2{
+    transition-delay: .2s;
+}
+.reveal_3-3{
+    transition-delay: .4s;
+}
+.reveal_3-4{
+    transition-delay: .6s;
+}
+.reveal_3-5{
+    transition-delay: .8s;
+}
+.reveal_3-7{
+    transition-delay: 1.4s;
+}
+
+
+.reveal_4-5{
+    transition-delay: 0.8s;
+}
+.reveal_4-6{
+    transition-delay: 1.2s;
+}
+
