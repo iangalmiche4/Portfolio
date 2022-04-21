@@ -535,6 +535,20 @@ div.section.s2 li.box div.link p{
         font-size: 0.8rem;
     }
 }
+@media screen and (max-width: 400px){
+    div.section.s2 a.box-content div.title h2{
+        font-size: 0.8rem;
+    }
+    div.section.s2 li.box div.date{
+        font-size: 0.6rem;
+    }
+    div.section.s2 li.box div.text p{
+        font-size: 0.6rem;
+    }
+    div.section.s2 li.box div.link p{
+        font-size: 0.6rem;
+    }
+}
 
 
 
@@ -588,9 +602,6 @@ div.section.s3 div.right div.right-content{
     flex-direction: column;
     justify-content: space-between;
 }
-div.section.s3 div.right-content div.name{
-    font-size: 0.9rem;
-}
 div.section.s3 div.right-content div.info p{
     color: rgba(0,0,0, 0.8);
     font-weight: 500;
@@ -602,6 +613,35 @@ div.section.s3 div.right-content div.text{
 div.section.s3 div.right-content div.text p{
     width: 70%;
     font-weight: 500;
+}
+
+
+/*______________________ RESPONSIVE THIRD SECTION ______________________*/
+
+@media screen and (max-width: 1000px){
+    div.section.s3 div.left .customer-img{
+        display: none;
+    }
+}
+@media screen and (max-width: 700px){
+    div.section.s3 div.container div.title{
+        font-size: 0.8rem;
+    }
+    div.section.s3 div.right div.right-content{
+        height: 100%;
+    }
+    div.section.s3 div.right-content div.name h1{
+        font-size: 0.9rem;
+    }
+    div.section.s3 div.right-content div.info p{
+        font-size: 0.9rem;
+    }
+    div.section.s3 div.right-content div.text{
+        font-size: 0.8rem;
+    }
+    div.section.s3 div.right-content div.text p{
+        width: 100%;
+    }
 }
 
 
@@ -746,8 +786,16 @@ div.section.s4 .w-button {
 
 
 
+/*______________________ RESPONSIVE FOURTH SECTION ______________________*/
 
-
+@media screen and (max-width: 1000px){
+    div.section.s4 div.boxs div.right{
+        display: none;
+    }
+    div.section.s4 div.boxs div.left{
+        width: 90%;
+    }
+}
 
 
 

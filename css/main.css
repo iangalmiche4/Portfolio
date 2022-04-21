@@ -627,27 +627,22 @@ div.section.s3 li.box div.link p{
         height: 100%;
     }
     div.section.s3 ul.boxs{
-        height: 85%;
+        height: 90%;
     }
     div.section.s3 a.box-content div.title h2{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
     div.section.s3 li.box div.date{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
     div.section.s3 li.box div.text p{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
     div.section.s3 li.box div.link p{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
     div.section.s3 li.box a.box-content{
         padding: 5px;
-    }
-}
-@media screen and (max-width: 400px){
-    div.section.s3 ul.boxs li.box{
-        height: 325px;
     }
 }
 
