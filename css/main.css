@@ -1,27 +1,50 @@
 /*______________________ SIMILAR ______________________*/
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500;600&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --main-color: #019267;
+    --text-selection-background: var(--main-color);
+    --text-selection-color: #fff;
+    --font-size-large: 300px;
+    --font-size-medium: 150px;
+    --font-size-small: 2rem;
+    --font-size-xsmall: 0.9rem;
+    --nav-height: 10.1vh;
+    --nav-container-width: 92%;
+    --section-content-width: 80%;
+    --section-content-height: 80%;
+    --left-nav-width: 110px;
+    --left-nav-width-small: 80px;
+    --slide-nav-span-width: 40px;
+    --slide-nav-span-width-large: 70px;
+    --slide-nav-span-height: 1.5px;
+    --scroll-down-bottom: 80px;
+    --scroll-down-left-large: 55px;
+    --scroll-down-left-small: 38px;
+    --scroll-down-after-height: 64px;
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 html{
+    font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+body {
     font-family: 'Quicksand', sans-serif;
 }
-h1::selection,
-h2::selection,
-h4::selection,
-a::selection,
-p::selection,
-img::selection,
-select::selection,
-label::selection,
-input::selection,
-textarea::selection,
-iframe::selection{
-    background-color: #019267;
-    color: #fff;
+h1, h2, h3, h4, h5, h6, p, a, ul, li, div {
+    font-family: inherit;
+}
+::selection {
+    background-color: var(--text-selection-background);
+    color: var(--text-selection-color);
 }
 a span{
     background: #019267 !important;
@@ -31,6 +54,7 @@ ul{
 }
 a{
     text-decoration: none;
+    color: inherit;
 }
 
 
@@ -814,109 +838,55 @@ div.section.s4 .w-button {
 
 
 
-
-
-
-
-
-
 /*______________________ SCROLL ANIMATION ______________________*/
 
 
-
-
-[class*= "reveal-"] {
+[class*="reveal-"], [class*="reveal_2-"], [class*="reveal_3-"], [class*="reveal_4-"] {
     opacity: 0;
+    transition: opacity 1s cubic-bezier(.5, 0, 0, 1), transform 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+[class*="reveal-"] {
     transform: translateY(30px);
 }
-
-.reveal-visible{
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s cubic-bezier(.5, 0, 0, 1);
-}
-[class*= "reveal_2-"] {
-    opacity: 0;
+[class*="reveal_2-"] {
     transform: translateX(30px);
 }
-.reveal-visible-2{
-    opacity: 1;
-    transform: translateX(0);
-    transition: 1s cubic-bezier(.5, 0, 0, 1);
-}
-
-[class*= "reveal_3-"] {
-    opacity: 0;
+[class*="reveal_3-"] {
     transform: translateX(-30px);
 }
-.reveal-visible-3{
-    opacity: 1;
-    transform: translateX(0);
-    transition: 1s cubic-bezier(.5, 0, 0, 1);
-}
-
-[class*= "reveal_4-"] {
-    opacity: 0;
+[class*="reveal_4-"] {
     transform: translateY(-30px);
 }
-.reveal-visible-4{
+
+.reveal-visible, .reveal-visible-2, .reveal-visible-3, .reveal-visible-4 {
     opacity: 1;
-    transform: translateY(0);
-    transition: 1s cubic-bezier(.5, 0, 0, 1);
+    transform: translate(0);
 }
 
-.reveal-2{
-    transition-delay: .2s;
-}
-.reveal-3{
-    transition-delay: .4s;
-}
-.reveal-4{
-    transition-delay: .6s;
-}
-.reveal-5{
-    transition-delay: .8s;
-}
-.reveal-6{
-    transition-delay: 1.2s;
-}
-.reveal_2-2{
-    transition-delay: .2s;
-}
-.reveal_2-3{
-    transition-delay: .4s;
-}
-.reveal_2-4{
-    transition-delay: .6s;
-}
-.reveal_2-5{
-    transition-delay: .8s;
-}
-.reveal_3-2{
-    transition-delay: .2s;
-}
-.reveal_3-3{
-    transition-delay: .4s;
-}
-.reveal_3-4{
-    transition-delay: .6s;
-}
-.reveal_3-5{
-    transition-delay: .8s;
-}
-.reveal_3-7{
-    transition-delay: 1.4s;
+.reveal-2, .reveal_2-2, .reveal_3-2, .reveal_4-5,
+.reveal-3, .reveal_2-3, .reveal_3-3, .reveal_4-6,
+.reveal-4, .reveal_2-4, .reveal_3-4,
+.reveal-5, .reveal_2-5, .reveal_3-5,
+.reveal-6, .reveal_3-7 {
+    transition-delay: calc(.2s * var(--delay-factor, 1));
 }
 
-
-.reveal_4-5{
-    transition-delay: 0.8s;
+:root {
+    --delay-factor-2: 1;
+    --delay-factor-3: 2;
+    --delay-factor-4: 3;
+    --delay-factor-5: 4;
+    --delay-factor-6: 6;
+    --delay-factor-7: 7;
 }
-.reveal_4-6{
-    transition-delay: 1.2s;
-}
 
-
+.reveal-2, .reveal_2-2, .reveal_3-2, .reveal_4-5 { --delay-factor: var(--delay-factor-2); }
+.reveal-3, .reveal_2-3, .reveal_3-3, .reveal_4-6 { --delay-factor: var(--delay-factor-3); }
+.reveal-4, .reveal_2-4, .reveal_3-4 { --delay-factor: var(--delay-factor-4); }
+.reveal-5, .reveal_2-5, .reveal_3-5 { --delay-factor: var(--delay-factor-5); }
+.reveal-6 { --delay-factor: var(--delay-factor-6); }
+.reveal_3-7 { --delay-factor: var(--delay-factor-7); }
 
 /*______________________ FOOTER ______________________*/
 
@@ -925,7 +895,7 @@ div.bottom-navbar{
     position: fixed;
     bottom: 0;
     z-index: 2;
-    height: 10vh;
+    line-height: 8.3vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -956,7 +926,6 @@ div.bottom-navbar div.right a{
     background-color: #000;
     color: #fff;
     padding: 4px 40px;
-    line-height: 6.6vh;
     cursor: pointer;
 }
 
